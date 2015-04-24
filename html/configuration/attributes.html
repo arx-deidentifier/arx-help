@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel='stylesheet' href='style.css' type='text/css' media='all' />
+</head>
+<body>
+
+    <h3>Attributes and generalization hierarchies</h3>
+    <p>This area allows to assign attribute and data types to columns and to specify the generalization that can be
+        applied to quasi-identifying attributes and be used to compute distances between sensitive attributes. As shown
+        in area 1, each tab is associated to one column in the input dataset. The dropdown list shown in area 2 allows
+        to specify the according attribute type for the column, whereas the dropdown list in area 3 allows to specify a
+        data type. Specifying a data type is optional but yields better results when creating generalization hierarchies
+        via ARX's built-in wizard and when visualizing data properties in the analysis perspective. Some data types are
+        associated with a format string, which can be specified in area 4.</p>
+
+    <img src="../img/anonymization-tool/configuration/attributes.png" alt="Attributes" width="430" height="305" />
+
+    <p>Area 5 displays a tabular representation of the associated generalization hierarchy, if there is any. The
+        values from the original input dataset are shown in the first column and the level of generalization increases
+        from left to right. This area also implements a basic editor for generalization hierarchies, which allows to
+        move, add and delete columns or rows and to alter the values of the cells. Please note that the defined
+        generalization hierarchy must be monotonic (meaning that it must resemble a tree structure), otherwise the tool
+        will abort with an error message when anonymizing data. As a starting point for defining generalization
+        hierarchies, the tool offers a wizard, which is able to create generalization hierarchies for many common types
+        of attributes. The wizard can be launched via the application menu or via an associated button in the
+        application’s toolbar. The drop-down lists in area 6 allow specifying minimal and maximal generalization levels
+        that should be applied for the selected attribute.</p>
+
+</body>
+</html>
