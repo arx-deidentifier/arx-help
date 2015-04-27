@@ -1,0 +1,29 @@
+<div>
+    <h3>Exploring the solution space (Area 1)</h3>
+    <p>In the center of the screen, the view displays a subset of the current solution space. The space may be
+        visualized in different ways. Firstly, it can be displayed as a mathematical structure, called lattice.</p>
+    <img src="/help/v3.0.0/img/exploration/explore_view_lattice.png" alt="Lattice view" width="640" height="384" />
+    <p>Here, each node resembles a transformation and is identified by the generalization levels that it defines for
+        the quasi-identifiers in the input dataset. Transformations are characterized by three different background
+        colors:</p>
+    <ol>
+        <li>Green denotes that the transformation results in an anonymous dataset</li>
+        <li>Red denotes that the transformation does not result in an anonymous dataset</li>
+        <li>Orange denotes that the transformation is the global optimum</li>
+    </ol>
+    <p>Transformations that have been checked explicitly be the tool are marked by a thick blue border. Dragging the
+        mouse while holding the left button allows to move the current view of the generalization lattice. Dragging the
+        mouse while holding the right button allows to zoom in and out of the current view. Hovering the mouse over a
+        transformation will display a tooltip with basic information about the transformation. Clicking a transformation
+        with left button will select it, while clicking a transformation with the right button will bring up a context
+        menu. Here, transformations can either be applied to the current input dataset or added to the clipboard.
+        Secondly, the solution space may be displayed as a list.</p>
+    <img src="/help/v3.0.0/img/exploration/explore_view_list.png" alt="List view" width="640" height="384" />
+    <p>Here, each transformation is represented by one row. Rows are sorted by information loss. Data utility and
+        the anonymity property are highlighted graphically. Thirdly, the solution space may be displayed as a set of
+        tiles.</p>
+    <img src="/help/v3.0.0/img/exploration/explore_view_tiles.png" alt="Tiles view" width="640" height="384" />
+    <p>This view is very similar to the list described in the previous paragraph. The color and border of an element
+        encodes information about the anonymity property, while the background color represents data utility. Elements
+        are also ordered by their utility.</p>
+</div>
