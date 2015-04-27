@@ -1,14 +1,33 @@
 <div>
-    <h3>Attributes and generalization hierarchies</h3>
+    <h3>Attributes and generalization hierarchies (Area 2)</h3>
     <p>This area allows to assign attribute and data types to columns and to specify the generalization that can be
         applied to quasi-identifying attributes and be used to compute distances between sensitive attributes. As shown
-        in area 1, each tab is associated to one column in the input dataset. The dropdown list shown in area 2 allows
-        to specify the according attribute type for the column, whereas the dropdown list in area 3 allows to specify a
-        data type. Specifying a data type is optional but yields better results when creating generalization hierarchies
-        via ARX's built-in wizard and when visualizing data properties in the analysis perspective. Some data types are
-        associated with a format string, which can be specified in area 4.</p>
-    <img src="/help/v3.0.0/img/configuration/attributes.png" alt="Attributes" width="430" height="305" />
-    <p>Area 5 displays a tabular representation of the associated generalization hierarchy, if there is any. The
+        in area 2.1, each tab is associated to one column in the input dataset. The dropdown list shown in area 2.2
+        allows to specify the according attribute type for the column, whereas the dropdown list in area 2.3 allows to
+        specify a data type. Specifying a data type is optional but yields better results when creating generalization
+        hierarchies via ARX's built-in wizard and when visualizing data properties in the analysis perspective. While
+        ARX will happily treat all data as strings, please note that specifying a data type can be important for
+        generating meaningful generalization hierarchies and having a more intuitive graphical representation of data
+        properties in the analysis perspective. Currently, the following data types are supported:</p>
+    <ol>
+        <li>String: a generic sequence of characters. This is the default data type.</li>
+        <li>Integer: a data type for numbers without a fractional component.</li>
+        <li>Decimal: a data type for numbers with fractional component.</li>
+        <li>Date/Time: a data type for dates and timestamps.</li>
+        <li>Ordered string: this data type provides loose support for "ontologies". It defines a list of values
+            that are "semantically" ordered.</li>
+    </ol>
+    <p>
+        Some data types are associated with a format string, which can be specified in area 2.4. Integers and
+        dates/timestamps for example require to specify a format string that defines how the values of the given type
+        are to be read from and translated into strings. More information on format strings for decimals can be found <a
+            title="Decimal format" href="http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html"
+            target="_blank">here</a> and information on format strings for dates/timestamps can be found <a
+            title="Date format" href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html"
+            target="_blank">here</a>.
+    </p>
+    <img src="/help/v3.0.0/img/configuration/attributes.png" alt="Attributes" width="314" height="180" />
+    <p>Area 2.5 displays a tabular representation of the associated generalization hierarchy, if there is any. The
         values from the original input dataset are shown in the first column and the level of generalization increases
         from left to right. This area also implements a basic editor for generalization hierarchies, which allows to
         move, add and delete columns or rows and to alter the values of the cells. Please note that the defined
@@ -16,6 +35,6 @@
         will abort with an error message when anonymizing data. As a starting point for defining generalization
         hierarchies, the tool offers a wizard, which is able to create generalization hierarchies for many common types
         of attributes. The wizard can be launched via the application menu or via an associated button in the
-        application’s toolbar. The drop-down lists in area 6 allow specifying minimal and maximal generalization levels
-        that should be applied for the selected attribute.</p>
+        application’s toolbar. The drop-down lists in area 2.6 allow specifying minimal and maximal generalization
+        levels that should be applied for the selected attribute.</p>
 </div>
