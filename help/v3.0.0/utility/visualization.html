@@ -1,0 +1,30 @@
+<div>
+    <h3>Comparing data (Area 3 &amp; 4)</h3>
+    <h4>Properties of the input dataset and the anonymized dataset</h4>
+    <p>ARX tries to present comparable data visualizations for original and transformed datasets. To this end, it
+        uses information from the attributes' data types and relationships between values extracted from the
+        generalization hierarchies. As a result, specifying meaningful types and hierarchies will increase the quality
+        and comparability of data visualizations.</p>
+    <p>The first tab in this view shows the summary statistics about the data values of the currently selected
+        column.</p>
+    <img src="/help/v3.0.0/img/utility/analyze_1.png" alt="Summary statistics" width="640" height="384" />
+    <p>The second and the third tab shows the distribution of values of the currently selected column. The second
+        one as a bar plot, the third tab as a tabular representation of the frequency distribution.</p>
+    <img src="/help/v3.0.0/img/utility/analyze_2.png" alt="Distribution plot" width="640" height="384" /> 
+    <img src="/help/v3.0.0/img/utility/analyze_3.png" alt="Distribution table" width="640" height="384" />
+    <p>The fourth and fifth tabs showing the contingency of the two currently selected attributes. The fourth tab
+        shows a heatmap, whereas the fifth tab shows the data as a table.</p>
+    <img src="/help/v3.0.0/img/utility/analyze_4.png" alt="Distribution plot" width="640" height="384" /> 
+    <img src="/help/v3.0.0/img/utility/analyze_5.png" alt="Distribution table" width="640" height="384" />
+    <h4>Properties of the selected transformation</h4>
+    <p>The last tab displays basic properties about the applied transformation. For the input dataset these
+        properties include, the number of tuples and the maximum number of allowed outliers and a shallow specification
+        of all attributes in the dataset. Further properties are displayed for the transformed dataset. These include
+        the actual number of outliers, the number of equivalence classes and the number of outlying classes, the
+        information loss and the resulting privacy guarantees. Note that these information represent the specification
+        that has been defined in the data definition perspective before the anonymization has been performed. The state
+        of the workbench will remain unchanged, even if these definitions are changed. To incorporate changes (e.g.,
+        adjusted generalization hierarchies) into the data exploration and data analysis perspectives, the data needs to
+        be anonymized again.</p>
+    <img src="/help/v3.0.0/img/utility/analyze_6.png" alt="Distribution table" width="640" height="384" />
+</div>
