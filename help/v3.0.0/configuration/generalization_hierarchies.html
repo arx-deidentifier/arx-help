@@ -1,5 +1,5 @@
 <div>
-    <h3>Creating generalization hierarchies</h3>
+    <h4>Creating generalization hierarchies (Area 2)</h4>
     <p>ARX offers several methods for creating generalization hierarchies for different types of attributes.
         Generalization hierarchies created with the wizard are represented in a functional manner, meaning that they can
         be created for the entire domain of an attribute without explicitly addressing the specific values in a concrete
@@ -13,7 +13,7 @@
         <li>Interval-based hierarchies: these hierarchies can be applied to variables with a ratio scale.</li>
         <li>Order-based hierarchies: this method an be used for variables with an ordinal scale.</li>
     </ol>
-    <h4>Redaction-based hierarchies</h4>
+    <h5>Redaction-based hierarchies</h5>
     <p>Redaction is a highly flexible mechanism that can be applied to many attributes and is especially suitable
         for alphanumeric codes, such as zip codes or telephone numbers. The following image shows a screenshot of the
         respective wizard page:</p>
@@ -22,7 +22,7 @@
         Then the characters are redacted, again, either from left to right, or from right to left. All values are
         adjusted to a common length, by introducing padding characters. This character, as well as the character used
         for redaction can be specified by the user.</p>
-    <h4>Interval-based hierarchies</h4>
+    <h5>Interval-based hierarchies</h5>
     <p>Intervals are a natural means of generalization for values with a ratio scale, such as integers, decimals or
         dates/timestamps. ARX offers a graphical editor for efficiently defining sets of intervals over the complete
         range of any of the above data types. As is shown in the following figure, first a sequence of intervals can be
@@ -57,7 +57,7 @@
         intervals are groups will be repeated. The first and last intervals within the "repeat" range will be adjusted
         to cover the "snap" range.</p>
     <img src="/help/v3.0.0/img/configuration/interval_wizard_2.png" alt="Range" width="408" height="278" />
-    <h4>Order-based hierarchies</h4>
+    <h5>Order-based hierarchies</h5>
     <p>Order-based hierarchies follow a similar principle as interval-based hierarchies, but can be applied to
         attributes with ordinal scale. In addition to the types of attributes covered by interval-based hierarchies this
         includes strings, using their lexicographical order, and ordered strings. First, the attributes within the
