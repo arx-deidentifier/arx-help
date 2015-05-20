@@ -1,12 +1,12 @@
 <div>
-    <h4>Filtering the lattice (Area 2)</h4>
+    <h4>Filtering the solution space (area 2)</h4>
     <img src="/help/v3.0.0/img/exploration/overview.png" alt="Exploration view" width="640" height="384" />
     <p>The figure shows the controls for filtering the displayed subset of the solution space. First, a
         quasi-identifier can be selected and the displayed transformations can be limited to the ones defining given
         generalization levels for the selected quasi identifier. Second, the displayed transformations can be limited to
-        anonymous, non-anonymous or unknown transformations. The slider on the bottom allow to display only
-        transformation with an information loss that is in between the defined minimum and maximum boundaries. Note that
-        the information loss of transformations that have not been checked explicitly are not known to the tool and are
-        therefore described by intervals defined by its successors and predecessors. These intervals might be wrong when
-        an approximate anonymization is performed.</p>
+        anonymous or non-anonymous transformations. The sliders at the bottom allow to display only
+        transformations with an information loss that is in between the configured minimum and maximum bounds. Note that
+        the information loss of transformations that have not been checked explicitly are not known to the tool and that they are
+        therefore estimated with bounding intervals that are computed from their successors and predecessors. 
+        These intervals might be wrong when an approximate solution has been computed.</p>
 </div>
