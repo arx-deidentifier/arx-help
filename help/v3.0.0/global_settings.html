@@ -6,19 +6,19 @@
         properties for the import and export of data. The <em>Transformation</em> tab can be utilized to alter some
         aspects of the data transformations performed by the tool. When <em>remove outliers</em> is checked, the values
         of the quasi-identifiers are remove for tuples that are outliers. Otherwise, these values are preserved. To this
-        end, these values are replaced by the <em>suppression string</em>. The <em>maximum size of the search space</em> defines an
-        upper bound for the number of possible transformations, which is defined by the number of quasi-identifiers and
-        the heights of their generalization hierarchies.
+        end, they are replaced by the <em>suppression string</em>. The <em>maximum size of the search space</em> defines an
+        upper bound for the number of transformations, which is defined as the produce of the heights quasi-identifiers' 
+        generalization hierarchies.
     </p>
     <img src="/help/v3.0.0/img/general_settings_1.png" alt="Project settings" width="377" height="181" />
     <p>
-        The <em>Internals</em> tab allows to adjust some parameters of the optimizations employed by the framework.
-        Changing the <em>number of snapshots</em> enables users to control a space-time-tradeoff provided by the framework.
+        The <em>Internals</em> tab allows to adjust some parameters of the optimizations employed by ARX.
+        Changing the <em>number of snapshots</em> enables users to control a space-time-tradeoff used during data anonymization.
         Choosing a value of <em>1</em> greatly reduces the main memory requirements of the tool, while leading to
         potentially significantly increased execution times. Choosing a larger value will reduce execution times, but
         increase memory consumption. The default value is <em>200</em>. The <em>Visualization</em> tab allows to control the
-        lattice viewer from the data exploration perspective. The <em>Risk analysis</em> tab allows defining parameter for risk based anonymization.
-        The <em>Solver</em> tab allows to specify parameters for the Newton-Raphson method used for population based
-        risk models.
+        visualizations of the solution space in the exploration perspective. The <em>Risk analysis</em> tab allows defining 
+        parameter for risk-based anonymization. The <em>Solver</em> tab allows to specify parameters of our implementation of
+        Newton'-Raphson's method used for population-based risk models.
     </p>
 </div>
