@@ -1,29 +1,26 @@
 <div>
     <h4>Privacy criteria (Area 3)</h4>
-    <p>This area allows to specify the desired privacy criteria and the metric used to measure information loss.
-        Criteria can be enabled and disabled by pressing on the plus and minus button respectively.</p>
+    <p>This area allows to configure the privacy model and the measure that is to be used for estimating data utility.
+        Privacy criteria can be enabled and disabled by clicking the plus and minus buttons respectively.</p>
     <img src="/help/v3.0.0/img/configuration/select_criteria.png" alt="Criteria selection view" width="263" height="230" />
-    <p>The k-anonymity, d-presence and the risk based criteria apply to all quasi-identifiers and can therefore
-        always be enabled. This is different for the l-diversity and t-closeness criteria. As they are applied to
-        specific sensitive attributes, they can only be enabled if a sensitive attribute is currently selected (Area 2).
-        The activated criteria a displayed in the table.</p>
+    <p> k-Anonymity, d-presence and risk-based criteria apply to all quasi-identifiers and can therefore
+        always be enabled. In contrast, l-diversity and t-closeness are associated with specific
+        sensitive attributes. They can thus only be enabled if a sensitive attribute is currently selected (area 2).
+        Criteria that will be enforced on the dataset are displayed in the table.</p>
     <h5>k-Anonymity</h5>
-    <p>To further specify the k-anonymity criterion, a slider can be used to define the minimal size of any
-        equivalence class.</p>
+    <p>To specify the parameter of a k-anonymity criterion a slider can be used.</p>
     <h5>l-Diversity</h5>
-    <p>To specify the details of the l-diversity criterion, a slider can be used to define the diversity parameter
-        l. A dropdown list allows selecting the type of l-diversity, i.e., distinct l-diversity, entropy l-diversity or
-        recursive-(c,l)-diversity. If recursive (c,l)-diversity is selected, an additional slider can be used to select
-        an appropriate value for the parameter c.</p>
+    <p>A dropdown list allows selecting the type of l-diversity that is to be used, i.e., distinct-l-diversity, entropy-l-diversity or
+        recursive-(c,l)-diversity. To specify the parameters of an l-diversity criterion, sliders can be used.</p>
     <h5>t-Closeness</h5>
-    <p>To specify the details of the t-Closeness criterion, a dropdown list allows selecting the function that
-        should be used for computing the closeness of data distributions. If "Hierarchical Earth Mover's Distance" is
-        selected, a generalization hierarchy must be specified for the respective sensitive attribute. A slider enables
-        selecting an appropriate value for the closeness parameter t.</p>
+    <p>A dropdown list allows selecting the distance function that
+        should be used for computing the distance between distributions of a sensitive attribute. 
+        If "hierarchical distance" is selected, a generalization hierarchy must be specified for the respective attribute. 
+        A slider supports specifying the parameter t.</p>
     <h5>d-Presence</h5>
-    <p>Two sliders can be used for selecting appropriate values for the d-min and d-max parameters. Note that
-        enabling d-presence also requires specifying a research subset to which it is to be applied (Area 5).</p>
-    <h5>Risk based criteria</h5>
-    <p>To configure the risk based criteria a slider can be used to select the risk threshold. If a popultion based
-        risk criteria is selected the underlying population model can also be configured in area 3.</p>
+    <p>Two sliders can be used for choosing values for d-min and d-max. Note that
+        enabling d-presence also requires specifying a research subset to which it is to be applied (area 5).</p>
+    <h5>Risk-based criteria</h5>
+    <p>To configure risk-based privacy criteria a slider allows selecting a risk threshold. If a popultion-based
+       criterion is used the underlying population model must also be configured (area 3).</p>
 </div>
