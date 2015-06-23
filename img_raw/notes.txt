@@ -1,0 +1,4 @@
+Resolution: 1280x768
+Desktop background color: white
+
+Resize to: 640x384
