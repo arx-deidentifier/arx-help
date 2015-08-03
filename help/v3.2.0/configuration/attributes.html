@@ -1,0 +1,40 @@
+<div>
+    <h3>Attributes and generalization hierarchies (area 2)</h3>
+    <p>This area allows to assign attribute types and data types to columns and to specify the generalization
+        hierarchies and/or microaggregation function for quasi-identifying and sensitive attributes. As shown in area
+        2.1, each tab is associated to one attribute of the input dataset. The dropdown list in area 2.2 supports
+        specifying the type of the attribute, whereas the dropdown list in area 2.3 allows to specify a data type.
+        Specifying a data type is optional but yields better results when creating generalization hierarchies via ARX's
+        built-in wizard and when visualizing data properties in the analysis perspective. While ARX will happily treat
+        all data as strings, please note that specifying a data type can be important for generating meaningful
+        generalization hierarchies and having a more intuitive graphical representation of data properties in the
+        analysis perspective. Currently, the following data types are supported:</p>
+    <ol>
+        <li>String: a generic sequence of characters. This is the default data type.</li>
+        <li>Integer: a data type for numbers without a fractional component.</li>
+        <li>Decimal: a data type for numbers with fractional component.</li>
+        <li>Date/Time: a data type for dates and timestamps.</li>
+        <li>Ordered string: this data type represents strings with ordinal scale.</li>
+    </ol>
+    <p>
+        Some data types require a format string, which can be specified in area 2.4. Integers and dates/timestamps are
+        typical examples. More information on format strings for decimals can be found <a title="Decimal format"
+            href="http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html" target="_blank">here</a> and
+        information on format strings for dates/timestamps can be found <a title="Date format"
+            href="http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html" target="_blank">here</a>.
+    </p>
+    <img src="/help/v3.1.0/img/configuration/attributes.png" alt="Attributes" width="314" height="180" />
+    <p>In Area 2.5 the coding model can be selected. Generalization and microaggregation are supported. The
+        drop-down lists in area 2.6 allows specifying minimal and maximal generalization levels for the selected
+        attribute if as coding model generalization is selected. If microaggregation is selected as coding model this
+        area allows to choose the microaggregation function and the way how missing data entries should be
+        handled. Area 2.7 displays a tabular representation of the associated generalization hierarchy, if there is any.
+        The values from the original input dataset are shown in the first column and the level of generalization
+        increases from left to right. This area also implements a basic editor for generalization hierarchies, which
+        allows to move, add and delete columns or rows and to alter the labels of individual cells. Please note that the
+        defined generalization hierarchy must be monotonic (meaning that it must resemble a tree structure), otherwise
+        ARX will abort with an error message when anonymizing data. As a starting point for defining generalization
+        hierarchies, the tool offers a wizard, which is able to create generalization hierarchies for many common types
+        of attributes. The wizard can be launched via the application menu or via an associated button in the
+        application toolbar.</p>
+</div>
