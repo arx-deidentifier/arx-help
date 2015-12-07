@@ -1,30 +1,12 @@
 <div>
-    <h4>Comparing data (area 3 &amp; 4)</h4>
-    <h5>Properties of the input data set and the anonymized data set</h5>
-    <p>ARX tries to present comparable data visualizations for original and transformed data sets. To this end, it
-        uses information from the attributes' data types and relationships between values extracted from the
-        generalization hierarchies. As a result, specifying reasonable data types and hierarchies will increase the quality
-        and comparability of data visualizations.</p>
-    <p>The first tab in this view shows summary statistics about the values of the currently selected
-        attribute.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_1.png" alt="Summary statistics" width="640" height="384" />
-    <p>The second and the third tab shows the frequency distribution of values of the currently selected attribute.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_2.png" alt="Distribution plot" width="640" height="384" /> 
-    <p>The second tab displays a histogram, the third tab displays a table.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_3.png" alt="Distribution table" width="640" height="384" />
-    <p>The fourth and fifth tabs show the contingency of the two currently selected attributes.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_4.png" alt="Distribution plot" width="640" height="384" /> 
-    <p>The fourth tab visualizes contingency with a heatmap, whereas the fifth presents the data as a table.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_5.png" alt="Distribution table" width="640" height="384" />
-    <h5>Properties of the selected transformation</h5>
-    <p>The last tab displays basic properties about the currently applied transformation and about the input configuration. 
-        For the input data set these properties include, the number of data entries and the suppression limit as well as 
-        a shallow specification of all attributes in the data set. Further properties are displayed for the transformed data set. These include
-        the actual number of outliers, the number of equivalence classes and the number of outlying classes, data
-        utility and privacy guarantees. Note that this information represents the specification
-        that has been defined in the configuration perspective prior to performing the anonymization process. The state
-        of the workbench will remain unchanged, even if these definitions are changed. To incorporate changes (e.g.,
-        adjusted generalization hierarchies) into the exploration and utility analysis perspectives, the data needs to
-        be anonymized again.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_6.png" alt="Distribution table" width="640" height="384" />
+    <h3>Classification accuracy</h3>
+    <p>This section can be used to compare the classification accuracy achieved with a generic implementation of logistic regression for
+       both the input and the output data set. The results are obtained with 10-fold cross-validation.
+       In the view displayed at the bottom, the features and classes that are to be analyzed can be selected.</p>
+    <img src="/help/v3.3.1/img/utility/analyze_9.png" alt="Classification accuracy" width="577" height="152" />
+    <p>The section in displayed at the bottom shows the results of the classification process. For input as well as output data, it displays
+       the number of instances of the class attribute as well as a baseline accuracy. For the input data set the baseline accuracy is ZeroR, for
+       the output data set it is the accuracy of logistic regression with the input data set. For the output data set, the view also displays
+       the difference in the number of instances of the class attribute. </p>
+    <img src="/help/v3.3.1/img/utility/analyze_10.png" alt="Classification accuracy" width="579" height="197" />
 </div>

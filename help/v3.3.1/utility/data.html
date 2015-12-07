@@ -1,12 +1,17 @@
 <div>
-    <h3>Classification accuracy</h3>
-    <p>This section can be used to compare the classification accuracy achieved with a generic implementation of logistic regression for
-       both the input and the output data set. The results are obtained with 10-fold cross-validation.
-       In the view displayed at the bottom, the features and classes that are to be analyzed can be selected.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_9.png" alt="Classification accuracy" width="577" height="152" />
-    <p>The section in displayed at the bottom shows the results of the classification process. For input as well as output data, it displays
-       the number of instances of the class attribute as well as a baseline accuracy. For the input data set the baseline accuracy is ZeroR, for
-       the output data set it is the accuracy of logistic regression with the input data set. For the output data set, the view also displays
-       the difference in the number of instances of the class attribute. </p>
-    <img src="/help/v3.3.1/img/utility/analyze_10.png" alt="Classification accuracy" width="579" height="197" />
+    <h3>Comparing input and output data</h3>
+    <p>In this section a transformed dataset can be compared to the original input dataset. 
+       Both tables are synchronized when they are browsed using the horizontal or vertical scrollbars.
+    <img src="/help/v3.3.1/img/utility/overview.png" alt="Data analysis" width="640" height="384" />
+    <p>The check boxes indicate, which rows are part of the research sample. The check boxes in the table displaying the
+        output dataset, indicate the sample that was selected when the de-identification process was performed. They cannot be
+        altered. The check boxes in the table displaying the input dataset represent the current research sample. They are editable.</p>
+    <p>Each table offers a few options, that are accessible via buttons in the top-right corner of the view:</p>
+    <ol>
+        <li>Pressing the first button will sort the data according to the currently selected attribute.</li>
+        <li>Pressing the second button will sort the output dataset according to all quasi-identifiers and then highlight
+            the equivalence classes.</li>
+        <li>Pressing the third button will toggle whether all records of the dataset are displayed or only the current research sample.</li>
+    </ol>
+    <img src="/help/v3.3.1/img/utility/data_buttons.png" alt="Buttons" width="104" height="28" />
 </div>
