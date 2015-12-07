@@ -1,5 +1,5 @@
 <div>
-    <h4>General settings</h4>
+    <h4>Transformation and utility model</h4>
     <p>In the first tab of this view, general properties of the transformation process can be specified.</p>
     <img src="/help/v3.3.1/img/configuration/general_1.png" alt="General" width="316" height="82" />
     <p>The first slider allows to define the suppression limit, which is the maximal number of outliers that can be tolerated in a de-identified
@@ -10,7 +10,7 @@
        e.g. Non-Uniform Entropy and Loss, precomputation can be enabled, which may also significantly reduced execution times.
        Precomputation is switch on when, for each quasi-identifier, the number of distinct data values divided by the total number of records 
        in the data set is lower than the configured threshold. Experiments have shown that 0.3 is often a good value for this parameter. 
-       <strong>The recommended setting is "off"</strong>.</p>
+       <strong>The recommended setting is "on"</strong>.</p>
     <p>The second tab allows specifying the measure that is to be used for estimating data utility.</p>
     <img src="/help/v3.3.1/img/configuration/general_2.png" alt="Utility" width="316" height="82" />
     <p>ARX currently supports the following measures. <strong>The recommended setting is "Loss"</strong>:</p>
@@ -29,7 +29,7 @@
        de-identification process but it will also reduce the quality of output data. <strong>The recommended setting is "off"</strong>.
        Since version 2.3. ARX also supports user-defined aggregate functions for many measures. These aggregate
        functions are used to compile the data utility obtained for the individual attributes of a data set into a global value.
-       <strong>The recommended setting is "Rank"</strong>. ARX currently supports the following aggregate functions:</p>
+       <strong>The recommended setting is "Arithmetic mean"</strong>. ARX currently supports the following aggregate functions:</p>
     <ol>
         <li>Max.</li>
         <li>Sum.</li>

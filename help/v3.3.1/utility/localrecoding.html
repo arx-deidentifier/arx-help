@@ -1,6 +1,10 @@
 <div>
     <h4>Local recoding</h4>
-    <p>This section allows to perform local recoding to further enhance data utility. It is recommended to start by favoring suppression over
-    generalization (moving the slider to the left) and performing a fixpoint-adaptive recoding process with a parameter of 0.05.</p>
-    <img src="/help/v3.3.1/img/utility/analyze_8.png" alt="Local recoding" width="577" height="152" />   
+    <p>This section allows to perform local recoding to further enhance data utility. 
+       It is recommended to start with favoring suppression over generalization (i.e. moving the slider to the left) and performing a 
+       fixpoint-adaptive recoding process with a parameter of 0.05.</p>
+    <img src="/help/v3.3.1/img/utility/analyze_8.png" alt="Local recoding" width="577" height="152" />
+    <p>ARX will perform local recoding by recursively executing a global recoding algorithm on all records that have been suppressed
+       in the previous iteration. With this method, asignificant improvement in homogeneity and data utility is achieved compared
+       to other local recoding algorithms.</p>
 </div>

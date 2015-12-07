@@ -1,10 +1,11 @@
 <div>
     <h4>Filtering the solution space</h4>
-    <img src="/help/v3.3.1/img/exploration/overview.png" alt="Exploration view" width="570" height="342" />
     <p>The figure shows controls for filtering the subset of the solution space that will be displayed in this perspective. First, a
        quasi-identifier can be selected and transformations can be restricted to ones defining the selected generalization levels for the 
        selected quasi identifier. Second, the displayed transformations can be restricted to
-       transformations which do or do not fulfill the privacy model. The sliders at the bottom allow to display only
+       transformations that do or do not preserve privacy according to the specified privacy model.</p>
+    <img src="/help/v3.3.1/img/exploration/filter.png" alt="Filter" width="434" height="189" />
+    <p>The sliders at the bottom allow to display only
        transformations with an information loss that is in between the configured minimum and maximum bounds. Note that
        the information loss of transformations that have not been checked explicitly are not known to the tool and that they are
        therefore estimated with bounding intervals that are computed from their successors and predecessors.
