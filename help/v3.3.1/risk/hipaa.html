@@ -1,35 +1,25 @@
 <div>
-    <h4>Risk estimates and settings (area 3 &amp; 4)</h4>
-    <p>This view displays an overview of several risk measures implemented in ARX</p>
-    <img src="/help/v3.3.1/img/risk/risk_view_estimates.png" alt="Estimates" width="640" height="384" />
-    <p>First, there are measures that are based on the sample itself, i.e., the size of the equivalence classes.
-        These include:</p>
+    <h4>HIPAA identifiers</h4>
+    <p>The Safe Harbor method of the US Health Insurance and
+    Portability and Accountability Act specifies 18 identifiers that must be altered or removed in order to derive a 
+    de-identified data set. The aim of this perspective is to detect such identifiers.</p>
+    <img src="/help/v3.3.1/img/risk/risk-5.png" alt="HIPAA identifiers" width="570" height="82" /> 
+    <p>Note: this method works on a best-effort basis. If no HIPAA identifiers are detected, this does not mean that no
+    HIPAA identifiers are contained in a data set. ARX favors recall over precision and does not implement methods for detecting
+    all types of HIPAA identifiers. The following types of attributes specified by HIPAA can potentially be detected:</p>
     <ul>
-        <li>Lowest re-identification risk</li>
-        <li>Individuals affected by lowest risk</li>
-        <li>Highest re-identification risk</li>
-        <li>Individuals affected by highest risk</li>
-        <li>Average re-identification risk</li>
-        <li>Fraction of unique tuples</li>
+        <li>Names.</li>
+        <li>Geographical subdivisions: regions, states, cities.</li>
+        <li>Dates.</li>
+        <li>Phone numbers.</li>
+        <li>Fax numbers.</li>
+        <li>Electronic mail addresses.</li>
+        <li>Social Security numbers.</li>
+        <li>License plate numbers.</li>
+        <li>Universal Resource Locators (URLs).</li>
+        <li>Internet Protocol (IP) addresses.</li>
     </ul>
-    <p>Moreover, ARX supports estimating re-identification risks based on uniqueness determined via super-population
-        models. These statistical methods estimate characteristics of the overall population with probability
-        distributions that are parameterized with sample characteristics. We provide default settings for populations,
-        such as the USA, UK, France or Germany, and support the methods by Pitman, Zayatz and the SNB model. The
-        properties of the underlying population can be specified in this view.</p>
-    <img src="/help/v3.3.1/img/risk/risk_view_population_model.png" alt="Population model" width="640" height="384" />
-    <p>
-        Different super-population models may return different estimates of population uniqueness. ARX also implements a
-        decision rule proposed and validated for clinical data sets by Dankar et al. More information can be found here <i>http://www.biomedcentral.com/1472-6947/12/66</i>.
-        In this view, the results of the methods by Pitman, Zayatz, the SNB model and the approach by Dankar may
-        be compared for different sampling fractions.
-    </p>
-    <img src="/help/v3.3.1/img/risk/risk_view_all_models.png" alt="Risk models" width="640" height="384" />
-    <p>This view displays the resulting estimates by the method of Dankar et al., again, for different sampling
-        fractions</p>
-    <img src="/help/v3.3.1/img/risk/risk_view_dankar.png" alt="Risk model Dankar" width="640" height="384" />
-    <p>For computing estimates from super-population models ARX must solve non-linear bivariate equation systems.
-        The solver used by ARX can be configured in the settings dialog. Here, you may specify options such as the total
-        number of iterations, iterations per try and the required accuracy etc. This may influence the precision of results
-        and execution times.</p>
+    <p>The method computes edit distances between common labels for HIPAA identifiers and the labels of the attributes in the 
+    data set. Moreover, it checks the values of the attributes for common patterns (e.g. of license plate numbers, ZIP codes and dates) 
+    and common instance values (e.g. common first names or last names).</p>
 </div>
