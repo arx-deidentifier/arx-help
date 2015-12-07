@@ -4,27 +4,27 @@
         Generalization hierarchies created with the wizard are represented in a functional manner, meaning that they can
         be created for the entire domain of an attribute without explicitly addressing the specific values in a concrete
         dataset. This enables the handling of continuous variables. Moreover, hierarchy specifications can be imported and
-        exported and they can thus reused for anonymizing different datasets with similar attributes. Please make sure that you
+        exported and they can thus be reused for de-identifying different datasets with similar attributes. Please make sure that you
         first select an appropriate data type for the attribute. The wizard supports three different types of
         hierarchies:</p>
     <ol>
-        <li>Redaction-based hierarchies: this general-purpose mechanism allows creating hierarchies for a broad
+        <li>Masking-based hierarchies: this general-purpose mechanism allows creating hierarchies for a broad
             spectrum of attributes.</li>
         <li>Interval-based hierarchies: these hierarchies can be applied to variables with a ratio scale.</li>
         <li>Order-based hierarchies: this method an be used for variables with an ordinal scale.</li>
     </ol>
-    <h5>Redaction-based hierarchies</h5>
-    <p>Redaction is a highly flexible mechanism that can be applied to many attributes and is especially suitable
-        for alphanumeric codes, such as zip codes or telephone numbers. The following image shows a screenshot of the
-        respective wizard page:</p>
-    <img src="/help/v3.3.1/img/configuration/redaction_wizard.png" alt="Redaction-based wizard" width="408" height="278" />
-    <p>In ARX, redaction follows a two-step process. First, values are aligned either to the left or to the right.
-        Then the characters are suppressed, again, either from left to right, or from right to left. All values are
+    <h5>Masking-based hierarchies</h5>
+    <p>Masking is a highly flexible mechanism that can be applied to many attributes and is especially suitable
+        for alphanumeric codes, such as ZIP codes or telephone numbers. The following image shows a screenshot of the
+        respective wizard:</p>
+    <img src="/help/v3.3.1/img/configuration/redaction_wizard.png" alt="Masking-based wizard" width="408" height="278" />
+    <p>In ARX, masking follows a two-step process. First, values are aligned either to the left or to the right.
+        Then the characters are masked, again, either from left to right, or from right to left. All values are
         adjusted to a common length, by introducing padding characters. This character, as well as the character used
-        for suppression can be specified by the user.</p>
+        for masking can be specified by the user.</p>
     <h5>Interval-based hierarchies</h5>
     <p>Intervals are a natural means of generalization for values with a ratio scale, such as integers, decimals or
-        dates/timestamps. ARX offers a graphical editor for efficiently defining sets of intervals over the complete
+        dates/time stamps. ARX offers a graphical editor for efficiently defining sets of intervals over the complete
         range of any of the above data types. As is shown in the following figure, first a sequence of intervals can be
         defined (shown on the left side of the figure). In the next step, subsequent levels consisting of groups can be
         defined. Each group combines a given number of elements from the previous level. Any sequence of intervals or
@@ -39,8 +39,7 @@
         interval. Currently, the following aggregate functions are supported:</p>
     <ol>
         <li>Set: a set-representation of input values is returned.</li>
-        <li>Prefix: a set of prefixes of the input values is returned. A parameter allows defining the length of
-            these prefixes.</li>
+        <li>Prefix: a set of prefixes of the input values is returned. A parameter allows defining the length of these prefixes.</li>
         <li>Common-prefix: returns the largest common prefix.</li>
         <li>Bounds: returns the first and last elements of the set.</li>
         <li>Interval: an interval between the minimal and maximal value is returned.</li>

@@ -2,25 +2,13 @@
     <h4>Privacy model (area 3)</h4>
     <p>This area allows to configure the privacy model and the measure that is to be used for estimating data utility.
         Privacy criteria can be enabled and disabled by clicking the plus and minus buttons respectively.</p>
-    <img src="/help/v3.3.1/img/configuration/select_criteria.png" alt="Criteria selection view" width="263" height="230" />
-    <p> k-Anonymity, d-presence and risk-based criteria apply to all quasi-identifiers and can therefore
-        always be enabled. In contrast, l-diversity and t-closeness are associated with specific
+    <img src="/help/v3.3.1/img/configuration/select_criteria.png" alt="Privacy models" width="263" height="230" />
+    <p> k-Anonymity, k-Map, δ-presence, risk-based privacy models and differential privacy apply to all quasi-identifiers and can therefore
+        always be enabled. In contrast, l-diversity, t-closeness and δ-disclosure privacy are associated with specific
         sensitive attributes. They can thus only be enabled if a sensitive attribute is currently selected (area 2).
-        Criteria that will be enforced on the dataset are displayed in the table.</p>
-    <h5>k-Anonymity</h5>
-    <p>To specify the parameter of a k-anonymity criterion a slider can be used.</p>
-    <h5>l-Diversity</h5>
-    <p>A dropdown list allows selecting the type of l-diversity that is to be used, i.e., distinct-l-diversity, entropy-l-diversity or
-        recursive-(c,l)-diversity. To specify the parameters of an l-diversity criterion, sliders can be used.</p>
-    <h5>t-Closeness</h5>
-    <p>A dropdown list allows selecting the distance function that
-        should be used for computing the distance between distributions of a sensitive attribute. 
-        If "hierarchical distance" is selected, a generalization hierarchy must be specified for the respective attribute. 
-        A slider supports specifying the parameter t.</p>
-    <h5>d-Presence</h5>
-    <p>Two sliders can be used for choosing values for d-min and d-max. Note that
-        enabling d-presence also requires specifying a research subset to which it is to be applied (area 5).</p>
-    <h5>Risk-based criteria</h5>
-    <p>To configure risk-based privacy criteria a slider allows selecting a risk threshold. If a popultion-based
-       criterion is used the underlying population model must also be configured (area 3).</p>
+        Models that will be used to de-identify the dataset are displayed in the table.</p>
+    <p> Note: if "hierarchical distance" is used as a ground-distance for d-presence, a generalization hierarchy must be 
+        specified for the respective attribute.</p>
+    <p> Note: k-Map, and δ-presence require specifying a research sample and population data (area 5).</p>
+    <p> Note: if a model based on population uniques is used, the underlying population must also be specified (area 3).</p>
 </div>

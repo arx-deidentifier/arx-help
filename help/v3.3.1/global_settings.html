@@ -1,25 +1,27 @@
 <div>
     <h3>Gobal settings</h3>
-    <p>
-        The settings window is accessible from either the application menu or the application toolbar. The <em>Project</em>
-        tab allows to alter general project properties. The <em>I/O settings</em> tab allows to configure basic
-        properties for the import and export of data. The <em>Transformation</em> tab can be utilized to alter some
-        aspects of the data transformations performed by the tool. When <em>remove outliers</em> is checked, the values
-        of the quasi-identifiers are remove for tuples that are outliers. Otherwise, these values are preserved. To this
-        end, they are replaced by the <em>suppression string</em>. The <em>maximum size of the search space</em> defines an
-        upper bound for the number of transformations, which is defined as the produce of the heights quasi-identifiers' 
-        generalization hierarchies.
-    </p>
+    <p>The settings window is accessible from either the application menu or the application toolbar. The <em>Project</em>
+       section allows to alter general project properties, including the syntax for
+       importing and exporting data.</p>
     <img src="/help/v3.3.1/img/general_settings_1.png" alt="Project settings" width="377" height="181" />
-    <p>
-        The <em>Internals</em> tab allows to adjust some parameters of the optimizations employed by ARX.
+    <p>The <em>Internals</em> section allows to adjust some parameters of the optimizations employed by ARX.
         Changing the <em>number of snapshots</em> enables users to control a space-time-tradeoff used during data anonymization.
         Choosing a value of <em>1</em> greatly reduces the main memory requirements of the tool, while leading to
         potentially significantly increased execution times. Choosing a larger value will reduce execution times, but
-        increase memory consumption. The default value is <em>200</em>. The <em>Visualization</em> tab allows to control the
-        visualizations of the solution space in the exploration perspective. The <em>Risk analysis</em> tab allows defining 
-        parameter for risk-based anonymization. The <em>Solver</em> tab allows to specify parameters of our implementation of
-        Newton'-Raphson's method used for population-based risk models. Here, you may specify options such as the total
-        number of iterations, iterations per try and the required accuracy.
+        increase memory consumption. The default value is <em>200</em>.
+        Finally, this are allows to control the visualizations of the solution space in the exploration perspective.</p>
+     <p>The section <em>Transformation</em> provides options for altering
+        aspects of the data transformations that are performed by ARX. First, it can be specified which types of attributes are to be masked
+        in records that are outliers. The <em>suppression string</em> is used as a masking character.</p>
+     <p>In the section <em>Search method</em> the maximal size of the search space can be specified. If this size is exceed
+        a heuristic search will be performed. The heuristic search process will again be termined after a user-defined amount
+        of time. When a risk-based de-identification process is performed, ARX can either suppress records based on the sizes
+        of their equivalence classes or use the utility measure for this purpose.</p>
+     <p>In the <em>Utility analysis</em> section, users can control properties of the summary statistics computed by ARX
+        and specify whether functional representations of generalization hierarchies should be used for computing data utility.
+        Moreover, some aspects of the logistic regression classification algorithm implemented by ARX can be specified.</p> 
+     <p>The section <em>Risk analysis</em> allows defining parameters of the Newton-Raphson method used for solving bivariate
+        non-linear equation systems when evaluating population-based risk models. Parameter include the total number of iterations, 
+        iterations per try and the required accuracy.
     </p>
 </div>
