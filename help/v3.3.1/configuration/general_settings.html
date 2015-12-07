@@ -3,13 +3,13 @@
     <p>In the first tab of this view, general properties of the transformation process can be specified.</p>
     <img src="/help/v3.3.1/img/configuration/general_1.png" alt="General" width="316" height="82" />
     <p>The first slider allows to define the suppression limit, which is the maximal number of outliers that can be tolerated in a de-identified
-       dataset. Records that are outliers will be removed from the dataset.
+       data set. Records that are outliers will be removed from the data set.
        <strong>The recommended value for this parameter is "100%"</strong>. The option "Approximate" can be enabled to compute an approximate solution 
        with potentially significantly reduced execution times. The solution is guaranteed to fulfill the given privacy 
        model, but it might not be optimal. <strong>The recommended setting is "off"</strong>. For some utility measures, 
        e.g. Non-Uniform Entropy and Loss, precomputation can be enabled, which may also significantly reduced execution times.
        Precomputation is switch on when, for each quasi-identifier, the number of distinct data values divided by the total number of records 
-       in the dataset is lower than the configured threshold. Experiments have shown that 0.3 is often a good value for this parameter. 
+       in the data set is lower than the configured threshold. Experiments have shown that 0.3 is often a good value for this parameter. 
        <strong>The recommended setting is "off"</strong>.</p>
     <p>The second tab allows specifying the measure that is to be used for estimating data utility.</p>
     <img src="/help/v3.3.1/img/configuration/general_2.png" alt="Utility" width="316" height="82" />
@@ -28,7 +28,7 @@
     <p>Monotonicity may be assumed, even for non-monotonic measures. This can significantly speed-up the
        de-identification process but it will also reduce the quality of output data. <strong>The recommended setting is "off"</strong>.
        Since version 2.3. ARX also supports user-defined aggregate functions for many measures. These aggregate
-       functions are used to compile the data utility obtained for the individual attributes of a dataset into a global value.
+       functions are used to compile the data utility obtained for the individual attributes of a data set into a global value.
        <strong>The recommended setting is "Rank"</strong>. ARX currently supports the following aggregate functions:</p>
     <ol>
         <li>Max.</li>
@@ -40,8 +40,8 @@
     <p>For most measures, attributes may be weighted as is shown in the following figure.</p>
     <img src="/help/v3.3.1/img/configuration/general_3.png" alt="Weights" width="316" height="82" />
     <p>Each of the knobs may be used to associated a weight to a specific quasi-identifier. When de-identifying a
-       dataset, ARX will try to reduce the loss of information for attributes with higher weights.</p>
+       data set, ARX will try to reduce the loss of information for attributes with higher weights.</p>
     <p>If "Loss" has been selected for measuring data utility, the coding model may also be further specified in an additional tab.</p>
     <img src="/help/v3.3.1/img/configuration/general_4.png" alt="Coding model" width="316" height="82" />
-    <p>With the slider it can be configured whether ARX should prefer generalization or suppression for de-identifying the dataset.</p>
+    <p>With the slider it can be configured whether ARX should prefer generalization or suppression for de-identifying the data set.</p>
 </div>
