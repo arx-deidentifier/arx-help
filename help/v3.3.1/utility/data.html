@@ -1,22 +1,12 @@
 <div>
-    <h3>Overview</h3>
-    <p>When a potentially suitable transformation has been selected, this perspective can be utilized to compare the
-        transformed dataset to the original input dataset. In the center, this perspective will display the original data
-        (area 1) and a transformation (area 2). Both tables are synchronized, e.g., when
-        they are browsed using the horizontal or vertical scrollbars. The areas 3 and 4, allow to compare statistical
-        information about the currently selected attribute(s).</p>
-    <img src="/help/v3.3.1/img/utility/overview.png" alt="Utility view" width="640" height="384" />
-    <p>The checkboxes indicate, which rows are contained in the research subset. The checkboxes in the view for the
-        result dataset, indicate the subset that was configured when the anonymization process was performed. They cannot be
-        edited. The checkboxes in the view for the input dataset represent the current research subset and can thus be
-        edited.</p>
-    <p>Each data view offers a few options, that are accessible via buttons in the top-right corner of the data view:</p>
-    <ol>
-        <li>The first button will sort the data according to the currently selected column</li>
-        <li>The second button will sort the output dataset according to all quasi-identifiers and then highlight
-            the equivalence classes</li>
-        <li>The third button will toggle whether all rows of the dataset are displayed or only the current research
-            subset</li>
-    </ol>
-    <img src="/help/v3.3.1/img/utility/data_buttons.png" alt="Buttons" width="104" height="28" />
+    <h3>Classification accuracy</h3>
+    <p>This section can be used to compare the classification accuracy achieved with a generic implementation of logistic regression for
+       both the input and the output data set. The results are obtained with 10-fold cross-validation.
+       In the view displayed at the bottom, the features and classes that are to be analyzed can be selected.</p>
+    <img src="/help/v3.3.1/img/utility/analyze_9.png" alt="Classification accuracy" width="577" height="152" />
+    <p>The section in displayed at the bottom shows the results of the classification process. For input as well as output data, it displays
+       the number of instances of the class attribute as well as a baseline accuracy. For the input data set the baseline accuracy is ZeroR, for
+       the output data set it is the accuracy of logistic regression with the input data set. For the output data set, the view also displays
+       the difference in the number of instances of the class attribute. </p>
+    <img src="/help/v3.3.1/img/utility/analyze_10.png" alt="Classification accuracy" width="579" height="197" />
 </div>
