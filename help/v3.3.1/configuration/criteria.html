@@ -1,12 +1,12 @@
 <div>
-    <h4>Privacy models</h4>
+    <h4>Privacy and population model</h4>
     <p>This area allows to select and configure the privacy models that are to be used to de-identify the data set.
        Privacy criteria can be added or removed by clicking the plus and minus buttons respectively.
        The third button allows to change their parameterization. With the up- and down-arrows it is possible to transfer
        parameterizations between privacy models against attribute disclosure.</p> 
     <img src="/help/v3.3.1/img/configuration/configure-1.png" alt="Privacy models" width="544" height="102" />
     <p>Most buttons will bring up the following configuration dialog. Here, the down-arrow can be used to select a
-       parameterization out of a set of common parametrizations for the selected privacy model.</p>
+       parameterization out of a set of common parameterizations for the selected privacy model.</p>
     <img src="/help/v3.3.1/img/configuration/select_criteria.png" alt="Privacy models" width="263" height="230" />
     <p> k-Anonymity, k-Map, &delta;-presence, risk-based privacy models and differential privacy apply to all quasi-identifiers and can therefore
         always be enabled. In contrast, l-diversity, t-closeness and &delta;-disclosure privacy are associated with specific
@@ -15,5 +15,7 @@
     <p> Note: If "hierarchical distance" is used as a ground-distance for &delta;-presence, a generalization hierarchy must be 
         specified for the respective attribute.</p>
     <p> Note: k-Map, and &delta;-presence require specifying a research sample and population data.</p>
-    <p> Note: If a model based on population uniqueness is used, the underlying population must also be specified.</p>
+    <p> Note: If a model based on population uniqueness is used, the underlying population must also be specified. This can be 
+        done with the following section of the perspective:</p>
+    <img src="/help/v3.3.1/img/configuration/configure-2.png" alt="Privacy models" width="570" height="83" />
 </div>
