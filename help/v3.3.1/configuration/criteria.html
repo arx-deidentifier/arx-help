@@ -6,12 +6,16 @@
         <li><em>Attribute disclosure</em> may be achieved even without linking an individual to a specific item in a data set. It protects sensitive attributes, which are attributes from the data set with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. As an example, linkage to a set of data entries allows inferring information if all items share a certain sensitive attribute value.</li>
         <li><em>Identity disclosure</em> (or re-identification) means that an individual can be linked to a specific data entry. This is a very serious type of attack, as it has legal consequences for data owners according to many laws and regulations worldwide. From the definition it also follows that an attacker can learn all sensitive information contained in the data entry about the individual.</li>
 	</ol>
-    <p>This area allows to select and configure the privacy models that are to be used to de-identify the data set.
+	<p>ARX supports the following privacy models against membership disclosure: &delta;-presence, the following privacy models
+	against attribute disclosure: l-diversity, t-closeness and &delta;-disclosure privacy and the following privacy models
+	against identity disclosure:  k-Anonymity, k-Map, risk-based privacy models for prosecutor, journalist and marketer risks.
+	Additionally, the tool supports a non-interactive implementation of (&epsilon;,&delta;)-differential privacy.</p>
+    <p>This area allows to select and configure one or multiple of these privacy models for de-identifying the data set.
        Models that have been selected for de-identifying the data set are displayed in a table.
        Privacy criteria can be added or removed by clicking the plus and minus button, respectively.
        The third button allows to change their parameterization. With the up- and down-arrows it is possible to transfer
        parameterizations between privacy models against attribute disclosure.</p> 
-    <img src="/help/v3.3.1/img/configuration/configure-1.png" alt="Privacy models" width="544" height="125" />
+    <img src="/help/v3.3.1/img/configuration/configure-1.png" alt="Privacy models" width="544" height="125" />    
     <p>Most buttons will bring up the following configuration dialog. Here, the down-arrow can be used to select a
        parameterization out of a set of common parameterizations for the selected privacy model.</p>
     <img src="/help/v3.3.1/img/configuration/select_criteria.png" alt="Privacy models" width="263" height="230" />
