@@ -1,7 +1,14 @@
 <div>
     <h4>Specifying attribute properties</h4>
-    <p>This area allows to assign attribute types and data types to columns and to specify the generalization
-        hierarchies and/or microaggregation functions for quasi-identifying and sensitive attributes.</p>
+    <p>This area allows to assign privacy risks and data types to attributes and to specify transformation rules
+       in terms of generalization hierarchies and/or microaggregation functions.
+       In terms of privacy risks, ARX distinguishes between the following four types of attributes:</p>
+    <ol>
+        <li><em>Identifying attributes</em> are associated with a high risk of re-identification. They will be removed from the dataset. Typical examples are names or Social Security Numbers.</li>
+        <li><em>Quasi-identifying attributes</em> are associated with a high risk of re-identification. They will be transformed by means of generalization, suppression or microaggregation. Typical examples are gender, date of birth and zip codes.</li>
+        <li><em>Sensitive attributes</em> encode properties with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. They will be kept unmodified but may be subject to further constraints, such as t-closeness or l-diversity. Typical examples are diagnoses.</li>
+        <li><em>Insensitive attributes</em> are not associated with any privacy risks. They will be kept unmodified.</li>
+    </ol>
     <img src="/help/v3.3.1/img/configuration/attributes.png" alt="Attributes" width="314" height="180" />
     <p>As can be seen in area 2.1, each tab is associated with one attribute of the input data set. The drop-down list in area 2.2 supports
         specifying the type of the attribute, whereas the drop-down list in area 2.3 allows to specify a data type.
