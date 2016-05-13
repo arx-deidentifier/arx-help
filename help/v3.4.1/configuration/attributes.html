@@ -1,0 +1,45 @@
+<div>
+    <h4>Specifying attribute properties</h4>
+    <p>This area allows to assign privacy risks and data types to attributes and to specify transformation rules
+       in terms of generalization hierarchies and/or micro-aggregation functions.
+       In terms of privacy risks, ARX distinguishes between the following four types of attributes:</p>
+    <ol>
+        <li><em>Identifying attributes</em> are associated with a high risk of re-identification. They will be removed from the data set. Typical examples are names or Social Security Numbers.</li>
+        <li><em>Quasi-identifying attributes</em> are associated with a high risk of re-identification. They will be transformed by means of generalization, suppression or micro-aggregation. Typical examples are gender, date of birth and ZIP codes.</li>
+        <li><em>Sensitive attributes</em> encode properties with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. They will be kept unmodified but may be subject to further constraints, such as t-closeness or l-diversity. Typical examples are diagnoses.</li>
+        <li><em>Insensitive attributes</em> are not associated with any privacy risks. They will be kept unmodified.</li>
+    </ol>
+    <img src="/help/v3.4.1/img/configuration/attributes.png" alt="Attributes" width="314" height="180" />
+    <p>As can be seen in area 2.1, each tab is associated with one attribute of the input data set. The drop-down list in area 2.2 supports
+        specifying the type of the attribute, whereas the drop-down list in area 2.3 allows to specify a data type.
+        Specifying a data type is optional but yields better results when creating generalization hierarchies via ARX's
+        built-in wizard and when visualizing data properties in the analysis perspective. While ARX will happily treat
+        all data as strings, please note that specifying a data type can be important for generating meaningful
+        generalization hierarchies and obtaining a more intuitive graphical representation of data properties.
+        Currently, the following data types are supported:</p>
+    <ol>
+        <li>String: a generic sequence of characters. This is the default data type.</li>
+        <li>Integer: a data type for numbers without a fractional component.</li>
+        <li>Decimal: a data type for numbers with fractional component.</li>
+        <li>Date/time: a data type for dates and time stamps.</li>
+        <li>Ordered string: this data type represents strings with ordinal scale.</li>
+    </ol>
+    <p> Some data types require a format string, which can be specified in area 2.4. Integers and dates/time stamps are
+        typical examples. More information on format strings for decimals can be found here
+        (<em>http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html</em>) and
+        information on format strings for dates/time stamps can be found here
+        (<em>http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</em>)
+    <p> In area 2.5 the coding model can be configured. Generalization and micro-aggregation are supported. The
+        drop-down lists in area 2.6 allow specifying minimal and maximal generalization levels for the selected
+        attribute if generalization is selected as a coding model. In case of micro-aggregation, this
+        area allows to choose the aggregate function and the way how missing data entries should be
+        handled. </p>
+    </p>Area 2.7 displays a tabular representation of the associated generalization hierarchy.
+        The values from the original input data set are shown in the first column and the level of generalization
+        increases from left to right. This area also implements a basic editor for generalization hierarchies, which
+        allows to move, add and delete columns or rows and to alter the labels of individual cells. Please note that
+        any generalization hierarchy must be a mono-hierarchy (i.e. it must form a tree structure).
+        As a starting point for defining generalization hierarchies, ARX offers a wizard, which can be used to create 
+        generalization hierarchies for many common types of attributes. The wizard can be launched via the application 
+        menu or via an associated button in the application toolbar.</p>
+</div>

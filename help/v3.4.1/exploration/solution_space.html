@@ -1,0 +1,28 @@
+<div>
+    <h4>Visualization of the solution space</h4>
+    <p>In the center of the screen, the view displays a subset of the current solution space. The space may be
+       visualized in different ways. First, it can be displayed as a Hasse diagram of the generalization lattice.</p>
+    <img src="/help/v3.4.1/img/exploration/explore_view_lattice.png" alt="Lattice view" width="570" height="342" />
+    <p>Here, each node represents a single transformation, which is identified by the generalization levels that it specifies for
+       the quasi-identifiers in the input data set. Transformations are characterized by three different background
+       colors:</p>
+    <ol>
+        <li>Green denotes that the transformation results in a privacy-preserving data set.</li>
+        <li>Red denotes that the transformation does not result in an privacy-preserving data set.</li>
+        <li>Orange denotes that the transformation is the optimal solution according to the specified utility measure.</li>
+    </ol>
+    <p>Transformations that have not been pruned during the de-identification process are marked with a thick blue border. Dragging the
+       mouse while holding the left button will move the current section of the solution space. Dragging the
+       mouse while holding the right button will zoom in and out of the current view. Hovering the mouse over a
+       transformation will display a tool tip with basic information about the transformation. Clicking a transformation
+       with the left button will select it, while clicking a transformation with the right button will bring up a context
+       menu. Here, transformations can either be applied to the current input data set or added to the clipboard.</p>
+    <p>The solution space may also be visualized as a list.</p>
+    <img src="/help/v3.4.1/img/exploration/explore_view_list.png" alt="List view" width="570" height="342" />
+    <p>Here, each transformation is represented by one row. Rows are sorted by information loss. Data utility and
+       the anonymity property are highlighted graphically. Thirdly, the solution space may be displayed as a set of tiles.</p>
+    <img src="/help/v3.4.1/img/exploration/explore_view_tiles.png" alt="Tiles view" width="570" height="342" />
+    <p>This view is very similar to the list described in the previous paragraph. The color and border of an element
+       encodes information about the anonymity property, while the background color represents data utility. Elements
+       are also ordered by their utility.</p>
+</div>
