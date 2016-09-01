@@ -1,0 +1,24 @@
+<div>
+    <h4>Population uniqueness</h4>
+ 	<p>ARX supports the estimation of marketer re-identification risks based on the number of population uniques in a sample.
+ 	   Population uniques are records that are unique within the sample (sample uniques) that are also unique within the
+ 	   overall population. Note: Not all sample uniques are also population uniques. When no data about the population has been 
+ 	   loaded into ARX, this number can be estimated with statistical models. Super-population models 
+ 	   estimate the characteristics of the overall population with probability
+       distributions that are parameterized with sample characteristics. ARX supports 
+       the methods by Hoshino (Pitman), Zayatz and Chen and McNulty (SNB).</p>
+    <p>Different models may return differently accurate estimates of the number of population uniques. As a rule of thumb,
+       the Pitman model should be used for sampling fractions lower than or equal to 10%. ARX also implements a
+       decision rule proposed and validated for clinical data sets by Dankar et al. More information can be found here 
+       (<em>http://www.biomedcentral.com/1472-6947/12/66</em>).</p>
+    <p>The tool also provides a perspective for comparing the results of different methods under the assumption of different
+       sampling fractions:</p>
+    <img src="/help/v3.4.2/img/risk/risk-8.png" alt="Risk models" width="570" height="142" />
+    <p>This view displays the estimates by the method of Dankar et al., again, for different sampling
+       fractions:</p>
+    <img src="/help/v3.4.2/img/risk/risk-7.png" alt="Dankar et al" width="570" height="142" />
+    <p>In the process of computing estimates with statistical models ARX must solve non-linear bivariate equation systems.
+       The solver used by ARX can be configured in the settings dialog. Here, you may specify options such as the total
+       number of iterations, iterations per try and the required accuracy etc. Changing these settings may influence the 
+       precision of the results and the time required to obtain time.</p>
+</div>
