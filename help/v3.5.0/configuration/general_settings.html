@@ -13,7 +13,9 @@
        <strong>The recommended setting is "on"</strong>.</p>
     <p>The second tab allows specifying the measure that is to be used for estimating data utility.</p>
     <img src="/help/v3.4.2/img/configuration/general_2.png" alt="Utility" width="316" height="82" />
-    <p>ARX currently supports the following measures. <strong>The recommended setting is "Loss"</strong>:</p>
+    <p>ARX will display data quality / utility in terms of "scores". A lower score means higher data quality, lower loss of information
+       of higher publisher payout, depending on the selected quality model.
+       ARX currently supports the following models:</p>
     <ol>
     	<li>Ambiguity.</li>
         <li>Height.</li>
@@ -30,7 +32,7 @@
     <p>Monotonicity is a property of privacy models and utility measures than can be exploited to make the
        de-identification process more efficient. In real-world settings, privacy models and utility measures are only rarely monotonic. 
        ARX can be configured to always assume monotonicity, which will speed-up the 
-       de-identification process significantly but will also reduce the quality of output data. <strong>The recommended setting is "off"</strong>.
+       de-identification process significantly but which may reduce the quality of output data. <strong>The recommended setting is "off"</strong>.
        Since version 2.3. ARX also supports user-defined aggregate functions for many measures. These aggregate
        functions are used to compile the utility estimates obtained for the individual attributes of a data set into a global value.
        <strong>The recommended setting is "Arithmetic mean"</strong>. ARX currently supports the following aggregate functions:</p>
