@@ -13,14 +13,14 @@ Moreover, the profitability privacy model implements a game-theoretic approach f
 (considering re-identification risks and data quality) to create de-identified datasets which maximize the profit of the
 data publisher. Additionally, the tool supports a non-interactive implementation of (&epsilon;,&delta;)-differential privacy.</p>
     <p>This area allows to select and configured one or multiple of these privacy models for de-identifying the data set:</p>
-    <img src="/help/v3.5.0/img/configuration/configure-1.png" alt="Privacy models" width="544" height="125" />
+    <img src="/help/v3.5.1/img/configuration/configure-1.png" alt="Privacy models" width="544" height="125" />
     <p>Models that have been selected for de-identifying the data set are displayed in a table.
        Privacy criteria can be added or removed by clicking the plus and minus button, respectively.
        The third button allows to change their parameterization. With the up- and down-arrows it is possible to transfer
        parameterizations between privacy models against attribute disclosure.</p> 
     <p>Most buttons will bring up the following configuration dialog. Here, the down-arrow can be used to select a
        parameterization out of a set of common parameterizations for the selected privacy model.</p>
-    <img src="/help/v3.5.0/img/configuration/select_criteria.png" alt="Privacy models" width="263" height="230" />
+    <img src="/help/v3.5.1/img/configuration/select_criteria.png" alt="Privacy models" width="263" height="230" />
     <p> k-Anonymity, k-Map, &delta;-presence, risk-based privacy models and differential privacy apply to all quasi-identifiers and can therefore
         always be enabled. In contrast, l-diversity, t-closeness and &delta;-disclosure privacy protect specific
         sensitive attributes. They can thus only be enabled if a sensitive attribute is currently selected.</p>
@@ -30,10 +30,10 @@ data publisher. Additionally, the tool supports a non-interactive implementation
     <p> Note: k-Map, and &delta;-presence require specifying a research sample and population data.</p>
     <p> Note: If a model based on population uniqueness is used, the underlying population must also be specified. This can be 
         done with the following section of the perspective:</p>
-    <img src="/help/v3.5.0/img/configuration/configure-2.png" alt="Privacy models" width="570" height="83" />
+    <img src="/help/v3.5.1/img/configuration/configure-2.png" alt="Privacy models" width="570" height="83" />
     <p> Note: Monetary cost/benefit analyses require the configuration of various parameters which can be found in an associated
     section of the perspective:</p>
-    <img src="/help/v3.5.0/img/configuration/configure-3.png" alt="Privacy models" width="570" height="55" />
+    <img src="/help/v3.5.1/img/configuration/configure-3.png" alt="Privacy models" width="570" height="55" />
     <p>The quality model <em>publisher payout</em> can be used to optimize the monetary gain of the data publisher. 
     In the configuration section, the following parameters must be specified:</p>
  	<ol>
