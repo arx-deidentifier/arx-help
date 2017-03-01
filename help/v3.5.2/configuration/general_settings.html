@@ -1,0 +1,55 @@
+<div>
+    <h4>Transformation and utility model</h4>
+    <p>In the first tab of this view, general properties of the transformation process can be specified.</p>
+    <img src="/help/v3.5.2/img/configuration/general_1.png" alt="General" width="316" height="82" />
+    <p>The first slider allows to define the suppression limit, which is the maximal number of outliers that can be tolerated in the de-identified
+       data set. Records that are outliers will be removed from the data set.
+       <strong>The recommended value for this parameter is "100%"</strong>. The option "Approximate" can be enabled to compute an approximate solution 
+       with potentially significantly reduced execution times. The solution is guaranteed to fulfill the given privacy 
+       model, but it might not be optimal. <strong>The recommended setting is "off"</strong>. For some utility measures, 
+       e.g. Non-Uniform Entropy and Loss, precomputation can be enabled, which may also significantly reduced execution times.
+       Precomputation is switched on when, for each quasi-identifier, the number of distinct data values divided by the total number of records 
+       in the data set is lower than the configured threshold. Experiments have shown that 0.3 is often a good value for this parameter. 
+       <strong>The recommended setting is "on"</strong>.</p>
+    <p>The second tab allows specifying the measure that is to be used for estimating data utility.</p>
+    <img src="/help/v3.5.2/img/configuration/general_2.png" alt="Utility" width="316" height="82" />
+    <p>ARX will display data quality / utility in terms of "scores". A lower score means higher data quality, lower loss of information
+       of higher publisher payout, depending on the selected quality model.
+       ARX currently supports the following models:</p>
+    <ol>
+    	<li>Ambiguity.</li>
+        <li>Height.</li>
+        <li>Precision.</li>
+        <li>Average equivalence class size.</li>
+        <li>Discernibility.</li>
+        <li>Non-uniform entropy.</li>
+        <li>Normalized non-uniform entropy.</li>
+        <li>KL divergence.</li>
+        <li>Loss.</li>
+        <li>Publisher payout.</li>
+        <li>Entropy-based record-level information loss.</li>
+    </ol>
+    <p>Monotonicity is a property of privacy models and utility measures than can be exploited to make the
+       de-identification process more efficient. In real-world settings, privacy models and utility measures are only rarely monotonic. 
+       ARX can be configured to always assume monotonicity, which will speed-up the 
+       de-identification process significantly but which may reduce the quality of output data. <strong>The recommended setting is "off"</strong>.
+       Since version 2.3. ARX also supports user-defined aggregate functions for many measures. These aggregate
+       functions are used to compile the utility estimates obtained for the individual attributes of a data set into a global value.
+       <strong>The recommended setting is "Arithmetic mean"</strong>. ARX currently supports the following aggregate functions:</p>
+    <ol>
+        <li>Maximum.</li>
+        <li>Sum.</li>
+        <li>Arithmetic mean.</li>
+        <li>Geometric mean.</li>
+        <li>Rank.</li>
+    </ol>
+    <p>Some utility models also support considering the effect of microaggregation on data quality. If supported, it can
+    be specified whether the mean squared error or a simple notion of information loss should be included.</p>
+    <p>For most measures, attributes may be weighted as is shown in the following screen shot.</p>
+    <img src="/help/v3.5.2/img/configuration/general_3.png" alt="Weights" width="316" height="82" />
+    <p>Each of the knobs may be used to associated a weight to a specific quasi-identifier. When de-identifying a
+       data set, ARX will try to reduce the loss of information for attributes with higher weights.</p>
+    <p>If "Loss" has been selected for measuring data utility, the coding model may also be further specified in an additional tab.</p>
+    <img src="/help/v3.5.2/img/configuration/general_4.png" alt="Coding model" width="316" height="82" />
+    <p>With the slider it can be configured whether ARX should prefer generalization or suppression for de-identifying the data set.</p>
+</div>
