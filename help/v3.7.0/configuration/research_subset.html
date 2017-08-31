@@ -1,0 +1,21 @@
+<div>
+    <h4>Defining a research sample</h4>
+    <p>In this view, a research sample can be specified. It represents a sample of the underlying population that will be
+        de-identified and exported. The population can be approximated by loading further data into ARX. This information
+        can be used for the &delta;-presence and k-map privacy models as well as for analyses of re-identification risks.
+        The buttons in the top-right corner implement different options for extracting a sample from the data set:</p>
+    <ol>
+        <li>Selecting no data records.</li>
+        <li>Selecting all data records.</li>
+        <li>Selecting some records, by matching the current population data against an external sample.</li>
+        <li>Selecting some records by querying the data set.</li>
+        <li>Selecting some records with random sampling.</li>
+    </ol>
+    <p>The view will show the size of the current sample and the method with which it was created. At any
+       time, the research sample can be altered by clicking the checkboxes shown in the data tables. The query syntax
+       is as follows: fields and constants must be enclosed in single quotes. In the example 'age' is a field and '50'
+       is a constant. The following operators are supported: &gt;, &gt;=, &lt;, &lt;=, =, or, and, ( and ). The dialog
+       dynamically shows the number of rows matching the query and displays error messages in case of syntactic errors.
+    </p>
+    <img src="/help/v3.6.0/img/configuration/query.png" alt="Query interface" width="263" height="300" />
+</div>

@@ -1,0 +1,47 @@
+<div>
+    <h4>Privacy, population, costs and benefits</h4>
+    <p>Three types of privacy threats are commonly considered when de-identifying data:</p>
+	<ol>
+        <li><em>Membership disclosure</em> means that data linkage allows an attacker to determine whether or not data about an individual is contained in a data set. While this does not directly disclose any information from the data set itself, it may allow an attacker to infer meta-information. While this deals with implicit sensitive attributes (meaning attributes of an individual that are not contained in the data set), other disclosure models deal with explicit sensitive attributes.</li>
+        <li><em>Attribute disclosure</em> may be achieved even without linking an individual to a specific item in a data set. It protects sensitive attributes, which are attributes from the data set with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. As an example, linkage to a set of data entries allows inferring information if all items share a certain sensitive attribute value.</li>
+        <li><em>Identity disclosure</em> (or re-identification) means that an individual can be linked to a specific data entry. This is a very serious type of attack, as it has legal consequences for data owners according to many laws and regulations worldwide. From the definition it also follows that an attacker can learn all sensitive information contained in the data entry about the individual.</li>
+	</ol>
+<p>ARX supports the following privacy models against membership disclosure: &delta;-presence, the following privacy models
+against attribute disclosure: l-diversity, t-closeness and &delta;-disclosure privacy and the following privacy models
+against identity disclosure:  k-Anonymity, k-Map, risk-based privacy models for prosecutor, journalist and marketer risks.
+Moreover, the profitability privacy model implements a game-theoretic approach for performing monetary cost/benefit analyses 
+(considering re-identification risks and data quality) to create de-identified datasets which maximize the profit of the
+data publisher. Additionally, the tool supports a non-interactive implementation of (&epsilon;,&delta;)-differential privacy.</p>
+    <p>This area allows to select and configured one or multiple of these privacy models for de-identifying the data set:</p>
+    <img src="/help/v3.6.0/img/configuration/configure-1.png" alt="Privacy models" width="544" height="125" />
+    <p>Models that have been selected for de-identifying the data set are displayed in a table.
+       Privacy criteria can be added or removed by clicking the plus and minus button, respectively.
+       The third button allows to change their parameterization. With the up- and down-arrows it is possible to transfer
+       parameterizations between privacy models against attribute disclosure.</p> 
+    <p>Most buttons will bring up the following configuration dialog. Here, the down-arrow can be used to select a
+       parameterization out of a set of common parameterizations for the selected privacy model.</p>
+    <img src="/help/v3.6.0/img/configuration/select_criteria.png" alt="Privacy models" width="263" height="230" />
+    <p> k-Anonymity, k-Map, &delta;-presence, risk-based privacy models and differential privacy apply to all quasi-identifiers and can therefore
+        always be enabled. In contrast, l-diversity, t-closeness and &delta;-disclosure privacy protect specific
+        sensitive attributes. They can thus only be enabled if a sensitive attribute is currently selected.</p>
+    <p> Note: If "hierarchical distance" is used as a ground-distance for &delta;-presence, a generalization hierarchy must be 
+        specified for the respective attribute.</p>
+    <p> Note: Entropy-l-diversity can be configured to use traditional Shannon entropy or the corrected Grassberger estimator.</p>
+    <p> Note: k-Map, and &delta;-presence require specifying a research sample and population data.</p>
+    <p> Note: If a model based on population uniqueness is used, the underlying population must also be specified. This can be 
+        done with the following section of the perspective:</p>
+    <img src="/help/v3.6.0/img/configuration/configure-2.png" alt="Privacy models" width="570" height="83" />
+    <p>Note: Methods for estimating population uniqueness assume that the dataset is a uniform sample of the population.
+        If this is not the case, results may be inaccurate.</p>
+    <p> Note: Monetary cost/benefit analyses require the configuration of various parameters which can be found in an associated
+    section of the perspective:</p>
+    <img src="/help/v3.6.0/img/configuration/configure-3.png" alt="Privacy models" width="570" height="55" />
+    <p>The quality model <em>publisher payout</em> can be used to optimize the monetary gain of the data publisher. 
+    In the configuration section, the following parameters must be specified:</p>
+ 	<ol>
+        <li><em>Adversary cost</em>: the amount of money needed by an attacker for trying to re-identify a single record.</li>
+        <li><em>Adversary gain</em>: the amount of money earned by an attacker for successfully re-identifying a single record.</li>
+        <li><em>Publisher benefit</em>: the amount of money earned by the data publisher for publishing a single record.</li>
+        <li><em>Publisher loss</em>: the amount of money lost by the data publisher, e.g. due to a fine, if a single record is attacked successfully.</li>
+	</ol> 
+</div>
