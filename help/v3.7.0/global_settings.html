@@ -1,44 +1,38 @@
 <div>
     <h4>Project settings</h4>
-    <p>The settings window is accessible from either the application menu or the application toolbar.</p>
-    <img src="/help/v3.6.0/img/general_settings_1.png" alt="Project settings" width="570" height="468" />
-    <p>The <em>Project</em> section can be used to alter general project properties:
-        <ul>
-            <li>Project metadata, including name, description and localization, can be updated.</li>
-            <li>The default syntax for file I/O can be specified.</li>
-        </ul>
-    </p>
-    <p>The <em>Internals</em> section can be used to adjust performance and visualization parameters:
-        <ul>
-            <li>Snapshot settings control the space-time trade-off during de-identification.  Larger snapshot values will 
-            typically reduce execution time but increase memory consumption.</li>
-            <li>To speed up de-identification for larger datasets, utility analyses can be disabled.</li> 
-        </ul>
-    </p> 
-    <p>The <em>Transformation</em> section provides options for altering and simplifying the presentation of transformed data:
-        <ul>
-            <li>Outliers can be specified to be removed from non-anonymous transformations, leaving only de-identified records in output data.</li>    
-            <li>Sensitive and insensitive attributes can be masked in suppressed tuples.</li>
-        </ul>
-    </p>
-    <p>The <em>Search method</em> section can be used to configure search strategy and risk based anonymization:
-        <ul>
-            <li>Time limited heuristic search can be enabled by default or for large search spaces.</li>
-            <li>Suppression of records with insufficient utility can be disabled.</li>
-        </ul>
-    </p>
-    <p>The <em>Utility analysis</em> section can be used to refine summary statistics and utility measures:
-        <ul>
-            <li>Generalization hierarchies can be configured as functional or explicit, where a functional hierarchy represents the 
-            entire domain of a given attribute, while an explicit hierarchy represents only values in the dataset.</li>
-            <li>Logistic regression performance, used for generic classification and calculation of precision and recall, can be
-            fine tuned through a variety or parameters.</li>
-        </ul>
-    </p>
-    <p>The <em>Risk analysis</em> section provides configuration options for the Newton-Raphson method used to solve the system
-       of bivariate non-linear equations evaluated for population-based risk models:
-        <ul>
-            <li>Optimization parameters include the total number of iterations, iterations per try and the required accuracy.</li>
-        </ul>
-    </p>
+    <p>The settings window is accessible from either the application menu or the application toolbar.
+    <img src="/help/v3.6.0/img/general_settings_1.png" alt="Project settings" width="570" height="468" /></p>
+    The <em>Project</em> section can be used to alter general project properties:
+    <ul>
+        <li>Project metadata, including name, description and localization, can be updated.</li>
+        <li>The default syntax for file I/O can be specified.</li>
+    </ul>
+    The <em>Internals</em> section can be used to adjust performance and visualization parameters:
+    <ul>
+        <li>Snapshot settings control the space-time trade-off during de-identification.  Larger snapshot values will 
+        typically reduce execution time but increase memory consumption.</li>
+        <li>To speed up de-identification for larger datasets, utility analyses can be disabled.</li> 
+    </ul>
+    The <em>Transformation</em> section provides options for altering and simplifying the presentation of transformed data:
+    <ul>
+        <li>Outliers can be specified to be removed from non-anonymous transformations, leaving only de-identified records in output data.</li>    
+        <li>Sensitive and insensitive attributes can be masked in suppressed tuples.</li>
+    </ul>
+    The <em>Search method</em> section can be used to configure search strategy and risk based anonymization:
+    <ul>
+        <li>Time limited heuristic search can be enabled by default or for large search spaces.</li>
+        <li>Suppression of records with insufficient utility can be disabled.</li>
+    </ul>
+    The <em>Utility analysis</em> section can be used to refine summary statistics and utility measures:
+    <ul>
+        <li>Generalization hierarchies can be configured as functional or explicit, where a functional hierarchy represents the 
+        entire domain of a given attribute, while an explicit hierarchy represents only values in the dataset.</li>
+        <li>Logistic regression performance, used for generic classification and calculation of precision and recall, can be
+        fine tuned through a variety or parameters.</li>
+    </ul>
+    The <em>Risk analysis</em> section provides configuration options for the Newton-Raphson method used to solve the system
+    of bivariate non-linear equations evaluated for population-based risk models:
+    <ul>
+        <li>Optimization parameters include the total number of iterations, iterations per try and the required accuracy.</li>
+    </ul>
 </div>
