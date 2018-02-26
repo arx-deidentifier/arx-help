@@ -15,26 +15,31 @@
         <li><em>Insensitive attributes</em> are not associated with any privacy risks. They will be kept unmodified.</li>
     </ol>
     <p>The assigned risk type is also indicated by a color coded bullet, next to the attribute name, in the input tab.</p>
-    <p>Transformation methods include generalization and micro-aggregation.  When generalization is selected, minimum and maximum applicable generalization levels can
-    be set.  When micro-aggregation is selected, the aggregation function and handling of missing data can be set.</p>
+    <p>Since version 3.7.0 there are also specific buttons that can be used to assign a certain attribute type to all attributes in the dataset.</p>
+    <img src="/help/v3.7.0/img/configuration/shortcut.png" alt="Shortcut" width="92" height="20" />
+    <p>Transformation methods include generalization and micro-aggregation. When generalization is selected, minimum and maximum applicable generalization levels can
+    be set. When micro-aggregation is selected, the aggregation function and handling of missing data can be set.</p>
     <p>When available, an attributes generalization hierarchy is displayed in tabular form, below the risk type and transformation inputs.  Attribute values in their most specific
     form are displayed in the leftmost column, with generalization levels increasing from left to right.  Right clicking in the hierarchy table displays an editor that can
     be used to create a simple hierarchy or perform row, column, and cell updates on an existing hierarchy.  To create a complex hierarchies, consider using the <em>Hierarchy Wizard</em>, 
     which can be launched from the Edit menu and application toolbar.</p>
     <h4>Metadata Tab</h4>
-    <p>The metadata tab is used to set the data type and format of an attribute.</p>
-    <img src="/help/v3.7.0/img/configuration/metadata.png" alt="Metadata" width="570" height="155" />
+    <p>The metadata tab can be used to set the data type and format of an attribute.</p>
+    <img src="/help/v3.7.0/img/configuration/metadata.png" alt="Metadata" width="570" height="120" />
     <p>Supported data types include:</p>
     <ol>
         <li>String: a generic sequence of characters. This is the default data type.</li>
         <li>Integer: a data type for numbers without a fractional component.</li>
         <li>Decimal: a data type for numbers with fractional component.</li>
         <li>Date/time: a data type for dates and time stamps.</li>
-        <li>Ordered string: this data type represents strings with ordinal scale.</li>
+        <li>Ordinal: this data type represents variables with an ordinal scale.</li>
     </ol>
     <p>Data type is set by right clicking on an attribute's row in the metadata table.  Format is prompted for automatically for applicable data types.
     Specifying a data type is optional, with String type used by default, but yields better results when creating generalization hierarchies and 
     visualizing data in the analysis perspective.</p>
-    <p>Information on decimal formats can be found at -(<em>http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html</em>).</p>
-    <p>Information on date formats can be found at - (<em>http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</em>)</p>
+    <p>Moreover, variables can be specified as potential response variables in modeling efforts that will be performed using output data.
+    When combined with an appropriate data quality model, ARX will then try to minimize impacts on the structural relationships between
+    quasi-identifying variables and the specified response variables.</p>
+    <p>Information on supported decimal formats can be found here: <em>http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html</em></p>
+    <p>Information on supported date formats can be found here: <em>http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</em></p>
 </div>

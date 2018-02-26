@@ -67,6 +67,13 @@
         pre-defined meaningful ordering of the domain of a discrete variable. Subsequent generalizations of values from
         the domain can be labeled with user defined constants.</p>
     <img src="/help/v3.7.0/img/configuration/ordered_wizard.png" alt="Order-based wizard" width="408" height="278" />
+        <h5>Date-based hierarchies</h5>
+    <p>This wizard supports the creation of hierarchies for dates by specifying the granularity of output data at increasing
+       generalization levels. Please note that it is important to specify granularity levels that form an hierarchy (e.g.
+       day-of-week can typically not be followed by week-of-year, because the same day-of-week can be generalized
+       to different weeks of a year). When this constraint is violated, ARX will raise an error message during the
+       anonymization process.</p>
+    <img src="/help/v3.7.0/img/configuration/date_wizard.png" alt="Date-based wizard" width="408" height="280" />
     <p>In a final step, all wizards show a tabular representation of the resulting hierarchy for the current input data set. 
         Additionally, the number of groups on each level is computed. The abstract specification created in the process can be
         exported and imported to allow reuse for different data sets with similar attributes.</p>

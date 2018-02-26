@@ -5,48 +5,21 @@
     <p>The view at the top, shows attribute-level quality, i.e. quality estimates that relate to individual
        quasi-identifiers. The view at the bottom, shows data-level quality, i.e. quality estimates for the
        overall set of quasi-identifiers.</p>
-    <img src="/help/v3.7.0/img/utility/quality.png" alt="Quality models" width="579" height="243" />
+    <img src="/help/v3.7.0/img/utility/quality.png" alt="Quality models" width="579" height="261" />
     <p>Note that not all quality measures are necessarily supported for all attributes or datasets. If a quality measure
        could not be evaluated for an attribute, the result is displayed as "N/A" in the upper table. As a consequence,
        this attribute has also been ignored when calculating data-level quality using the same model.</p>
     <p>The following attribute-level quality models are currently implemented:</p>
 	<ol>
-	    <li><em>Precision</em>: A model that captures the generalization intensity of attribute values.
-	                            For details see: Sweeney, L.: Achieving k-anonymity privacy protection using generalization and suppression
- 								J. Uncertain. Fuzz. Knowl. Sys. 10 (5), p. 571-588 (2002).</li>
-        <li><em>Granularity</em>: A model that captures the granularity of data. 
-                                  For details see: Iyengar, V.: Transforming data to satisfy privacy constraints. 
-                                  Proc. Int. Conf. Knowl. Disc. Data Mining, p. 279-288 (2002).</li>
-        <li><em>Non-Uniform Entropy</em>: A model that captures differences in the distributions of attribute values.
-        								  For details see: Prasser, F., Bild, R., Kuhn, K.A.
-        								  A Generic Method for Assessing the Quality of De-Identified Health Data.
-                                          Proc. Med. Inf. Europe (2016). and 
-                                          De Waal, A., Willenborg, L.: 
-                                          Information loss through global recoding and local suppression 
-                                          Netherlands Off. Stat., vol. 14, p. 17-20 (1999).</li>
+	    <li><em>Precision</em>: A model that captures the generalization intensity of attribute values. For details see: Sweeney, L.: Achieving k-anonymity privacy protection using generalization and suppression. J. Uncertain. Fuzz. Knowl. Sys. 10 (5), p. 571-588 (2002).</li>
+        <li><em>Granularity</em>: A model that captures the granularity of data. For details see: Iyengar, V.: Transforming data to satisfy privacy constraints. Proc. Int. Conf. Knowl. Disc. Data Mining, p. 279-288 (2002).</li>
+        <li><em>Non-Uniform Entropy</em>: A model that captures differences in the distributions of attribute values. For details see: Prasser, F., Bild, R., Kuhn, K.A.: A Generic Method for Assessing the Quality of De-Identified Health Data. Proc. Med. Inf. Europe (2016). and  De Waal, A., Willenborg, L.:  Information loss through global recoding and local suppression. Netherlands Off. Stat., vol. 14, p. 17-20 (1999).</li>
 	</ol>
 	<p>In addition, the following dataset-level quality models are available:</p>
 	<ol>
-	    <li><em>Average cell size</em>: A model that captures the average size of groups of indistinguishable records.
-	                                    For details see: LeFevre, K., DeWitt, D., Ramakrishnan, R.: 
-	                                    Mondrian multidimensional k-anonymity
-                                        Proc. Int. Conf. Data Engineering (2006).</li>
-        <li><em>Discernibility</em>: A model that captures the size of groups of indistinguishable records and introduces
-                                     a penalty for records which have been completely suppressed.
-                                     For details see: Bayardo, R., Agrawal, R.:
-                                     Data privacy through optimal k-anonymization
-                                     Proc. Int. Conf. Data Engineering, p. 217-228 (2005).</li>
-        <li><em>Ambiguity</em>: A model that captures ambiguity of records.
-        						For details see: Goldberger, Tassa. Efficient Anonymizations with Enhanced Utility.
-                                Trans. Data. Priv.</li>
-        <li><em>Sum of squared errors</em>: A model that interprets records as vectors and captures the sum of squared errors in 
-                                            groups of indistinguishable records.
-                                            For details see: Soria-Comas, J., et al.:
-                                            T-closeness through microaggregation: Strict privacy with enhanced utility preservation.
-                                            IEEE Trans. Knowl. Data Eng., 27(11), p. 3098-3110 (2015)
-                                            and
-                                            D. Sanchez, S. Martinez, and J. Domingo-Ferrer. Comment on unique in the shopping mall: On
-                                            the reidentifiability of credit card metadata. Science, 351(6279):1274-1274, 2016.</li>
-                                            
+	    <li><em>Average cell size</em>: A model that captures the average size of groups of indistinguishable records. For details see: LeFevre, K., DeWitt, D., Ramakrishnan, R.: Mondrian multidimensional k-anonymity. Proc. Int. Conf. Data Engineering (2006).</li>
+        <li><em>Discernibility</em>: A model that captures the size of groups of indistinguishable records and introduces a penalty for records which have been completely suppressed. For details see: Bayardo, R., Agrawal, R.: Data privacy through optimal k-anonymization. Proc. Int. Conf. Data Engineering, p. 217-228 (2005).</li>
+        <li><em>Ambiguity</em>: A model that captures ambiguity of records. For details see: Goldberger, Tassa.: Efficient Anonymizations with Enhanced Utility. Trans. Data. Priv.</li>
+        <li><em>Sum of squared errors</em>: A model that interprets records as vectors and captures the sum of squared errors in groups of indistinguishable records. For details see: Soria-Comas, J., et al.: T-closeness through microaggregation: Strict privacy with enhanced utility preservation. IEEE Trans. Knowl. Data Eng., 27(11), p. 3098-3110 (2015) and D. Sanchez, S. Martinez, and J. Domingo-Ferrer.: Comment on unique in the shopping mall: On the reidentifiability of credit card metadata. Science, 351(6279):1274-1274, 2016.</li>
 	    </ol>
 </div>
