@@ -1,24 +1,23 @@
 <div>
-    <h4>Viewing data sets</h4>
-    <p>ARX displays input and output data as tables. In the table headers, attribute types are indicated by displaying different 
-       colors:</p>
+    <h4>Tables representing input and output data</h4>
+    <p>ARX displays input and output data in special tables with headers which indicate attribute types by different colors:</p>
     <div>
         <ol>
-            <li>Red indicates an <em>identifying attribute</em>. Identifying attributes are associated with a high risk of re-identification. They will be removed from the data set. Typical examples are names or Social Security Numbers.</li>
-            <li>Yellow indicates a <em>quasi-identifying attribute</em>. Quasi-identifying attributes are associated with a high risk of re-identification. They will be transformed by means of generalization, suppression or micro-aggregation. Typical examples are gender, date of birth and ZIP codes.</li>
-            <li>Purple indicates a <em>sensitive attribute</em>. Sensitive attributes encode properties with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. They will be kept unmodified but may be subject to further constraints, such as t-closeness or l-diversity. Typical examples are diagnoses.</li>
-            <li>Green indicates an <em>insensitive attribute</em>. Insensitive attributes are not associated with any privacy risks. They will be kept unmodified.</li>
+            <li>Red indicates an <em>identifying attribute</em>.</li>
+            <li>Yellow indicates a <em>quasi-identifying attribute</em>.</li>
+            <li>Purple indicates a <em>sensitive attribute</em>.</li>
+            <li>Green indicates an <em>insensitive attribute</em>.</li>
         </ol>
     </div>
-    <p>Each row is further associated with a checkbox. These checkboxes indicate, which rows have been selected for inclusion into 
-       the research sample. The checkboxes in the view for output data sets, indicate the sample that was specified when the 
+    <p>Each record is further associated with a checkbox. These checkboxes indicate, which records are contained in the specified
+       research sample. The checkboxes in the view for output data sets, indicate the sample that was specified when the 
        anonymization process was last executed. They cannot be edited. The checkboxes in the view for the input data set 
        represent the current research sample. They are editable.</p>
     <img src="/help/v3.7.0/img/configuration/sort_buttons.png" alt="Data options" width="104" height="28" />
     <p>Each table offers a few options that are accessible via buttons in the top-right corner:</p>
     <ol>
-        <li>Pressing the first button will sort the data according to the currently selected column.</li>
-        <li>Pressing the second button will sort the output data set according to all quasi-identifiers and then highlight the equivalence classes.</li>
-        <li>Pressing the third button will toggle between showing all records of the data set or only the research sample.</li>
+        <li>The first button sorts the data according to the currently selected column.</li>
+        <li>The second button sorts the output data set according to all quasi-identifiers and then highlight equivalence classes.</li>
+        <li>The third button controls whether all records are shown or only records contained in the research sample.</li>
     </ol>
 </div>

@@ -1,43 +1,47 @@
 <div>
     <h4>Specifying attribute properties</h4>
-    <p>Attribute properties are set in the Transformation and Metadata tabs within the Configuration tab.  To set an attribute's properties, first select an 
-    attribute in the input tab (e.g. age in the figure below).  The transformation and metadata tabs will be linked with that attribute and updated accordingly.</p>
+    <p>Attribute properties can be set in the tabs "data transformation" and "attribute metadata" within this perspective.
+    To set an attribute's properties, it must first be selected in the tabular view of the dataset.
+    The views in the tabs will be linked with the selected attribute and updated accordingly.</p>
     <img src="/help/v3.7.0/img/configuration/input.png" alt="Input" width="570" height="84" />
-    <h4>Transformation Tab</h4>
-    <p>The transformation tab is used to set the type of privacy risk and transformation method associated with an attribute.  The transformation tab 
-    also displays an attribute's generalization hierarchy and provides a context menu for in-place editing.</p>
+    <h4>Data transformation</h4>
+    <p>The transformation tab can be used to set the type of an attribute and the associated transformation method.
+    The transformation tab also displays the attribute's generalization hierarchy and provides a context menu for in-place editing.</p>
     <img src="/help/v3.7.0/img/configuration/transformation.png" alt="Transformation" width="570" height="211" />
-    <p>Types of privacy risk include:</p>
+    <p>Supported attribute types:</p>
     <ol>
         <li><em>Identifying attributes</em> are associated with a high risk of re-identification. They will be removed from the data set. Typical examples are names or Social Security Numbers.</li>
-        <li><em>Quasi-identifying attributes</em> are associated with a high risk of re-identification. They will be transformed by means of generalization, suppression or micro-aggregation. Typical examples are gender, date of birth and ZIP codes.</li>
+        <li><em>Quasi-identifying attributes</em> can in combination be used for re-identification attacks. They will be transformed by means of generalization, suppression or microaggregation. Typical examples are gender, date of birth and ZIP codes.</li>
         <li><em>Sensitive attributes</em> encode properties with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. They will be kept unmodified but may be subject to further constraints, such as t-closeness or l-diversity. Typical examples are diagnoses.</li>
-        <li><em>Insensitive attributes</em> are not associated with any privacy risks. They will be kept unmodified.</li>
+        <li><em>Insensitive attributes</em> are not associated with privacy risks. They will be kept unmodified.</li>
     </ol>
-    <p>The assigned risk type is also indicated by a color coded bullet, next to the attribute name, in the input tab.</p>
-    <p>Since version 3.7.0 there are also specific buttons that can be used to assign a certain attribute type to all attributes in the data set.</p>
+    <p>Note: the specified type of an attribute is also indicated by a color coded bullet, next to the attribute name, in the input tab.</p>
+    <p>Note: since version 3.7.0 there are also specific buttons that can be used to assign a certain attribute type to all attributes in the data set.</p>
     <img src="/help/v3.7.0/img/configuration/shortcut.png" alt="Shortcut" width="92" height="20" />
-    <p>Transformation methods include generalization and micro-aggregation. When generalization is selected, minimum and maximum applicable generalization levels can
-    be set. When micro-aggregation is selected, the aggregation function and handling of missing data can be set.</p>
-    <p>When available, an attributes generalization hierarchy is displayed in tabular form, below the risk type and transformation inputs.  Attribute values in their most specific
-    form are displayed in the leftmost column, with generalization levels increasing from left to right.  Right clicking in the hierarchy table displays an editor that can
-    be used to create a simple hierarchy or perform row, column, and cell updates on an existing hierarchy.  To create a complex hierarchies, consider using the <em>Hierarchy Wizard</em>, 
-    which can be launched from the Edit menu and application toolbar.</p>
-    <h4>Metadata Tab</h4>
-    <p>The metadata tab can be used to set the data type and format of an attribute.</p>
+    <p>Supported transformation methods include generalization, microaggregation and suppression. When generalization is selected, minimum and maximum generalization levels can
+    be specified. Microaggregation may be performed with or without prior clustering using the specified value generalization hierarchies, Moreover,
+    the aggregation function and how missing values should be handled can be specified.</p>
+    <p>The associated value generalization hierarchy is displayed in tabular form. Original attribute values
+    are displayed in the leftmost column, with generalization levels increasing from left to right.  Right clicking the table brings up a context menu providing access to editing
+    functionalities. This can be used to create simple hierarchies or to simple modifications to exesting hierarchies. Moreover, hierarchies representing attribute suppression
+    can be created. For creating more complex hierarchies, ARX supports several <em>wizards,</em> 
+    which can be launched from the application menu and the tool bar.</p>
+    <h4>Attribute metadata</h4>
+    <p>This view can be used to specify data types (including formats) of attributes. Please note that the correct data type is needed to use most of
+    the wizards for hierarchy creation.</p>
     <img src="/help/v3.7.0/img/configuration/metadata.png" alt="Metadata" width="570" height="120" />
-    <p>Supported data types include:</p>
+    <p>Supported data types:</p>
     <ol>
         <li>String: a generic sequence of characters. This is the default data type.</li>
         <li>Integer: a data type for numbers without a fractional component.</li>
         <li>Decimal: a data type for numbers with fractional component.</li>
-        <li>Date/time: a data type for dates and time stamps.</li>
-        <li>Ordinal: this data type represents variables with an ordinal scale.</li>
+        <li>Date/time: a data type for dates (with or without time).</li>
+        <li>Ordinal: string variables with an ordinal scale.</li>
     </ol>
-    <p>Data type is set by right clicking on an attribute's row in the metadata table.  Format is prompted for automatically for applicable data types.
+    <p>Data types can be set by right clicking on an attribute's row in the table. When needed, ARX will ask for a suitable format string.
     Specifying a data type is optional, with String type used by default, but yields better results when creating generalization hierarchies and 
     visualizing data in the analysis perspective.</p>
-    <p>Moreover, variables can be specified as potential response variables in modeling efforts that will be performed using output data.
+    <p>Variables can be defined as "response variables" in modeling efforts that will be performed using output data.
     When combined with an appropriate data quality model, ARX will then try to minimize impacts on the structural relationships between
     quasi-identifying variables and the specified response variables.</p>
     <p>Information on supported decimal formats can be found here: <em>http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html</em></p>
