@@ -1,13 +1,24 @@
 <div>
     <h4>Classification accuracy</h4>
-    <p>This section can be used to compare the classification accuracy that can be achieved with a generic implementation of logistic regression for
-       both the input and the output data sets. The results are obtained with 10-fold cross-validation.
-       In the view displayed at the bottom, the features and classes that are to be analyzed can be selected.</p>
-    <img src="/help/v3.7.0/img/utility/analyze_9.png" alt="Classification accuracy" width="577" height="152" />
-    <p>The section displayed at the top shows the results of the classification process. For input as well as output data, it displays
-       the number of instances of the class attribute as well as a baseline accuracy. For the input data set the baseline accuracy is defined as the accuracy
-       that can be achieved with the ZeroR classification method. For the output data set the baseline accuracy is defined as the accuracy 
-       that can be achieved when classifying the input data set. For output data, the view also displays
-       the difference in the number of instances of the class attribute compared to the input data set. </p>
-    <img src="/help/v3.7.0/img/utility/analyze_10.png" alt="Classification accuracy" width="579" height="197" />
+    <p>This section can be used to compare the performance of classification models trained on anonymized output data. 
+    Please note that ARX supports a specific quality model for optimizing output data towards suitability as a training set for model generation.</p>
+    <p>In the view displayed at the bottom left, the features and target variables can be selected and feature scaling functions may be specified:</p>
+    <img src="/help/v3.7.0/img/utility/analyze_9.png" alt="Classification accuracy" width="580" height="136" />
+    <p>In the view displayed at the bottom right, different types of classification models can be selected and configured:</p>
+    <img src="/help/v3.7.0/img/utility/analyze_18.png" alt="Classification accuracy" width="580" height="139" />
+    <p>ARX currently (3.7.0) supports the following types of classification models:</p>
+       <ol>
+    	<li>Logistic regression.</li>
+        <li>Random forest.</li>
+        <li>Naive Bayes.</li>
+    </ol>
+    <p>The section displayed at the top shows the results of the classification analysis. For input as well as output data, it displays
+    the number of instances of the class attribute as well as various performance parameters. Performance measures are typically
+    expressed relative to the performance of a trivial ZeroR classifier trained on unmodified input data and a the selected type of model 
+    also trained on input data. Results are obtained using k-fold cross-validation.</p>
+    <p>The section "overview", displays relative classification accuracy as well as sensitivity, specificity and Brier score:</p>
+    <img src="/help/v3.7.0/img/utility/analyze_19.png" alt="Classification accuracy" width="580" height="160" />
+    <p>The section "ROC Curves", displays ROC curves and the Area under the ROC Curve (AUC) for selected instances of the class attribute:</p>
+    <img src="/help/v3.7.0/img/utility/analyze_20.png" alt="Classification accuracy" width="580" height="258" />
+    <p>Please note that ARX uses a one-vs-all approach to calculate performance measures for multinomial classifiers.</p>
 </div>
