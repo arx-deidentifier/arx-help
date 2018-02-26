@@ -5,7 +5,7 @@
        importing and exporting data.</p>
     <img src="/help/v3.4.1/img/general_settings_1.png" alt="Project settings" width="570" height="468" />
     <p>The <em>Internals</em> section allows to adjust some parameters of the optimizations implemented by ARX.
-        Changing the number of snapshots enables users to control a space-time trade-off used during data de-identification.
+        Changing the number of snapshots enables users to control a space-time trade-off used during data anonymization.
         Choosing a value of 1 significantly reduces the main memory requirements of the tool, but may
         result in increased execution times. Choosing a larger value will reduce execution times, but
         increase memory consumption. The default value is 200.
@@ -15,7 +15,7 @@
         in records that are outliers. The <em>suppression string</em> is used as a masking character.</p>
      <p>In the section <em>Search method</em> the maximal size of the search space can be specified. If this size is exceed
         a heuristic search will be performed. The heuristic search process will again be termined after a user-defined amount
-        of time. When a risk-based de-identification process is performed, ARX can either suppress records based on the sizes
+        of time. When a risk-based anonymization process is performed, ARX can either suppress records based on the sizes
         of their equivalence classes or use the utility measure for this purpose.</p>
      <p>In the <em>Utility analysis</em> section, users can control properties of the summary statistics computed by ARX
         and specify whether functional representations of generalization hierarchies should be used for computing data utility.
