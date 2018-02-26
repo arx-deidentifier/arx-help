@@ -1,14 +1,18 @@
 <div>
-    <h4>Configuring the de-identification process</h4>
-    <p>In the configuration perspective, data can be imported, generalization hierarchies can be created, and the anonymization process
-       can be parameterized.</p>
-    <p>The data import process supports a variety of data sources with user defined syntax, and allows the specification of attribute meta-data, 
-       including data type and format.</p>
-    <p>Generalization hierarchies can be created for quasi-identifier and sensitive attributes in interval, ordinal and mask form.  
-       Hierarchies can be created with software assistance or imported from CSV files.</p>
-    <p>The anonymization process is parameterized in the privacy and utility sub-panels.  The privacy sub-panel allows the selection
-       of one or more privacy models.  For applicable privacy models, population and financial data can also be specified.  The utility
-       sub-panel allows the selection of a utility measure.  For applicable utility measures, a variety of related parameters can be configured 
-       (e.g. suppression, generalization, aggregation, monotonicity and precomputation).</p>
+    <h4>Configuring perspective</h4>
+    <p>In the configuration perspective, data can be imported, transformation rules can be created, and privacy as well as quality models
+       can be selected and parameterized. Input data is always displayed on the left hand side.</p>
     <img src="/help/v3.7.0/img/configure_view_1.png" alt="Configuration perspective" width="570" height="342" />
+    <p>The data import wizard supports a variety of data sources and allows the specify meta data, such as data types and formats.</p>
+    <img src="/help/v3.7.0/img/import_data.png" alt="Import" width="308" height="265" />
+    <p>ARX is able to import data from other CSV files, MS Excel spreadsheets and relational database systems, such as MS SQL, DB2, MySQL or PostgreSQL.</p>
+    <p>The data import wizard also supports the renaming, removing and reordering of columns.
+       During data import, data types are automatically detected and data cleansing may be performed. This means that values that do not conform to the 
+       specified data type will be replaced with specific null values, which are handled correctly by all methods implemented in ARX.</p>
+    <p>All tabular data displayed by ARX can be exported into CSV files via context menus.</p>
+    <p>ARX uses value generalization hierarchies to implement a wide variety of data transformation methods. These hierarchies
+       can either be created within the software (via specific wizards) or imported from CSV files. Hierarchies created with ARX
+       can also be exported to CSV files.</p>
+    <p>Further views in this perspective can be used to specify all further parameters needed for anonymization. The most
+       important views cover privacy models, quality models and data transformation methods.</p>
 </div>
