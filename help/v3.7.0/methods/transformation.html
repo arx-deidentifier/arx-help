@@ -1,8 +1,35 @@
 <div>
-    <h4>Supported transformation methods</h4>
-     <p>ARX supports top- and bottom-coding, generalization, microaggregation and suppression. When generalization is selected, 
-     minimum and maximum generalization levels can be specified. Microaggregation may be performed with or without prior 
-     clustering using the specified value generalization hierarchies. Moreover, the aggregation function and how missing
-     values should be handled can be specified.</p>
-    <p>TODO</p>
+<h4>Supported transformation methods</h4>
+<p>ARX supports a variety of common data transformation models, which can also be combined with each other.</p>
+<h4>Global and local transformation schemes</h4>
+ARX can be configured to apply the same transformation scheme to all records in a dataset or apply different 
+transformation schemes to different subsets of the records. The maximal number of transformations that may be
+used can be specified. The exact nature of the resulting data transformation scheme depends on additional settings
+performed by the user. If value generalization hierarchies have been specified, for example, performing global
+transformation will result in full-domain generalization, where each value of an attribute's domain is transformed
+to the same generalization level. With local transformation, different generalization levels may be used for the
+same attribute value in different records. Analogously, if transformation rules have been specified that only
+suppress values, a global transformation process will result in attribute suppression, while a local transformation 
+process will result in a cell suppression scheme.
+<h4>Value generalization</h4>
+User-specified generalization hierarchies form the backbone of ARX's data transformation mechanism. Hierarchies can
+either be used to directly reduce the uniqueness of attribute values or to form clusters that will be transformed
+using further methods, such as micro-aggregation.
+<h4>Random sampling</h4>
+ARX supports multiple methods for drawing a sample from the input dataset. This can be used to relate a dataset to an
+underlying population table or to reduce privacy risks. Random sampling is further used to introduce randomness
+into the differential privacy mechanism supported by ARX.
+<h4>Record, attribute and cell suppression</h4>
+As described previously, ARX also supports removing individual attributes, attribute values or complete records in the
+transformation process. This can be controlled by defining appropriate hierarchies (which is supported by specific wizards),
+by performing local or global transformation and by specifying a limit for the maximal number of records which may be removed.
+<h4>Micro-aggregation</h4>
+Sets of numeric attribute values can be transformed into a common value by user-specified aggregation functions.
+Prior to aggregation, clustering can be performed based on value generalization hierarchies.
+<h4>Top- and bottom-coding</h4>
+By constructing appropriate hierarchies using ARX's built-in wizards, hierarchies can be created that truncate
+values exceeding a user-specified range.
+<h4>Categorization</h4>
+The wizards provided by the software can be used to create transformation rules that are represented as functions,
+which can be used to perform on-the-fly categorization of continuous variables during anonymization.
 </div>
