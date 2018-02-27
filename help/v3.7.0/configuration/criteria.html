@@ -1,28 +1,6 @@
 <div>
     <h4>Privacy models, population properties, costs and benefits of data sharing</h4>
-    <p>Three types of privacy threats are commonly considered when anonymizing data:</p>
-	<ol>
-        <li><em>Membership disclosure</em> means that data linkage allows an attacker to determine whether or not data about an individual is contained in a data set. While this does not directly disclose any information from the data set itself, it may allow an attacker to infer meta-information. While this deals with implicit sensitive attributes (meaning attributes of an individual that are not contained in the data set), other disclosure models deal with explicit sensitive attributes.</li>
-        <li><em>Attribute disclosure</em> may be achieved even without linking an individual to a specific item in a data set. It protects sensitive attributes, which are attributes from the data set with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. As an example, linkage to a set of data entries allows inferring information if all items share a certain sensitive attribute value.</li>
-        <li><em>Identity disclosure</em> (or re-identification) means that an individual can be linked to a specific data entry. This is a serious type of attack, as it has legal consequences for data owners according to many laws and regulations worldwide. From the definition it also follows that an attacker can learn all sensitive information contained in the data entry about the individual.</li>
-	</ol>
-<p>ARX currently supports the following models protecting data from membership disclosure:</p>
-	<ul>
-        <li><em>&delta;-presence, (&epsilon;,&delta;)-differential privacy</em></li>
-    </ul>
- <p>ARX currently supports the following models protecting data from attribute disclosure:</p>
- 	<ul>
-       <li><em>l-diversity, t-closeness, &beta;-likeness and &delta;-disclosure privacy, (&epsilon;,&delta;)-differential privacy</em></li>
-    </ul>
- <p>ARX currently supports the following models protecting data from identity disclosure:</p>
-  	<ul>
-       <li><em>k-anonymity, k-map, risk-based privacy models for prosecutor, journalist and marketer risks, (&epsilon;,&delta;)-differential privacy</em></li>
-    </ul>     
-<p>Moreover, the software supports a game-theoretic model for performing cost/benefit analyses of data publishing
-   to create output data sets which maximize data publisher's monetary benefit. In ARX, this model is called <em>profitability</em>.</p>
-<p>Please note: ARX supports (almost) arbitrary combinations of privacy models and different variants of most 
-   models, which focus on different attacker models or which are optimized for attributes
-   with specific data types. Privacy models can be selected and configured in the following view:</p>
+    <p>Privacy models can be selected and configured in the following view:</p>
     <img src="/help/v3.7.0/img/configuration/configure-1.png" alt="Privacy models" width="544" height="125" />
     <p>Models that have been selected are shown in the table.
        Privacy models can be added or removed by clicking the plus or minus button, respectively.
@@ -42,8 +20,8 @@
     <img src="/help/v3.7.0/img/configuration/configure-2.png" alt="Privacy models" width="570" height="83" />
     <p>Note: Models based on population uniqueness assume that the data set is a uniform sample of the population.
         If this is not the case, results may be inaccurate.</p>
-    <p> Note: Game-theoretic privacy models are based on a cost/benefit analysis and therefore 
-        require the specification of various parameters which can be found in an associated section of the perspective:</p>
+    <p> Note: The game-theoretic model is based on a cost/benefit analysis and therefore requires the specification 
+        of various parameters which can be found in an associated section of the perspective:</p>
     <img src="/help/v3.7.0/img/configuration/configure-3.png" alt="Privacy models" width="570" height="55" />
     <p>Here, the following parameters must be specified:</p>
  	<ol>
