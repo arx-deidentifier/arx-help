@@ -18,21 +18,7 @@
        depending on the selected model. Note, however, that scores may significantly deviate from the actual values
        that would be returned by the models due to internal optimizations in ARX. As a consequence, you should never
        report "scores" as a measure describing data quality. To obtain such measures, the utility analysis perspective
-       should be used. ARX currently supports the following models:</p>
-    <ol>
-    	<li>Ambiguity.</li>
-        <li>Height.</li>
-        <li>Precision.</li>
-        <li>Average equivalence class size.</li>
-        <li>Discernibility.</li>
-        <li>Non-uniform entropy.</li>
-        <li>Normalized non-uniform entropy.</li>
-        <li>KL divergence.</li>
-        <li>Data granularity / loss.</li>
-        <li>Publisher payout.</li>
-        <li>Entropy-based record-level information loss.</li>
-        <li>Classification accuracy.</li>
-    </ol>
+       should be used.</p>
     <p>Monotonicity is a property of privacy and utility models that can be exploited to make the
        anonymization process more efficient. In real-world settings, however, models almost never monotonic due to the
        complexity of the transformation methods used by the software. 
@@ -41,14 +27,7 @@
        <strong>The recommended setting is "off"</strong>.
        ARX also supports user-defined aggregate functions for many quality models. These aggregate
        functions will be used to compile the estimates obtained for the individual attributes of a data set into a global value.
-       <strong>The recommended setting is "Arithmetic mean"</strong>. ARX currently supports the following aggregate functions:</p>
-    <ol>
-        <li>Maximum.</li>
-        <li>Sum.</li>
-        <li>Arithmetic mean.</li>
-        <li>Geometric mean.</li>
-        <li>Rank.</li>
-    </ol>
+       <strong>The recommended setting is "Arithmetic mean"</strong>.</p>
     <p>Most models support weights that can be assigned to attributes to specify their importance using the following view:</p>
     <img src="/help/v3.7.0/img/configuration/general_3.png" alt="Weights" width="316" height="82" />
     <p>Each of the knobs can be used to associated a weight to a specific quasi-identifier. When anonymizing the
