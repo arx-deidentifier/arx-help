@@ -1,14 +1,14 @@
 <div>
-	<h4>Supported privacy models</h4>
-	<p>Three types of privacy threats are commonly considered when anonymizing data:</p>
-	<ol>
+    <h4>Supported privacy models</h4>
+    <p>Three types of privacy threats are commonly considered when anonymizing data:</p>
+    <ol>
         <li><em>Membership disclosure</em> means that data linkage allows an attacker to determine whether or not data about an individual is contained in a data set. While this does not directly disclose any information from the data set itself, it may allow an attacker to infer meta-information. While this deals with implicit sensitive attributes (meaning attributes of an individual that are not contained in the data set), other disclosure models deal with explicit sensitive attributes.</li>
         <li><em>Attribute disclosure</em> may be achieved even without linking an individual to a specific item in a data set. It protects sensitive attributes, which are attributes from the data set with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. As an example, linkage to a set of data entries allows inferring information if all items share a certain sensitive attribute value.</li>
         <li><em>Identity disclosure</em> (or re-identification) means that an individual can be linked to a specific data entry. This is a serious type of attack, as it has legal consequences for data owners according to many laws and regulations worldwide. From the definition it also follows that an attacker can learn all sensitive information contained in the data entry about the individual.</li>
-	</ol>
-	<p>The specifics of the disclosure risks from which a dataset is to be protected can be specified by categorizing the attributes of the input dataset
-	into different types:</p>
-	<ol>
+    </ol>
+    <p>The specifics of the disclosure risks from which a dataset is to be protected can be specified by categorizing the attributes of the input dataset
+    into different types:</p>
+    <ol>
         <li><em>Identifying attributes</em> are associated with a high risk of re-identification. They will be removed from the data set. Typical examples are names or Social Security Numbers.</li>
         <li><em>Quasi-identifying attributes</em> can in combination be used for re-identification attacks. They will be transformed by means of generalization, suppression or microaggregation. Typical examples are gender, date of birth and ZIP codes.</li>
         <li><em>Sensitive attributes</em> encode properties with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. They will be kept unmodified but may be subject to further constraints, such as t-closeness or l-diversity. Typical examples are diagnoses.</li>
