@@ -10,13 +10,13 @@
     <img src="/help/v3.7.0/img/configuration/transformation.png" alt="Transformation" width="570" height="211" />
     <p>Supported attribute types:</p>
     <ol>
-        <li><em>Identifying attributes</em> will be removed from the data set.</li>
+        <li><em>Identifying attributes</em> will be removed from the dataset.</li>
         <li><em>Quasi-identifying attributes</em> will be transformed.</li>
         <li><em>Sensitive attributes</em> will be kept as-is but they can be protected using privacy models, such as t-closeness or l-diversity.</li>
         <li><em>Insensitive attributes</em> will be kept unmodified.</li>
     </ol>
     <p>Note: the specified type of an attribute is also indicated by a color coded bullet, next to the attribute name, in the input tab.</p>
-    <p>Note: since version 3.7.0 there are also specific buttons that can be used to assign a certain attribute type to all attributes in the data set.</p>
+    <p>Note: since version 3.7.0 there are also specific buttons that can be used to assign a certain attribute type to all attributes in the dataset.</p>
     <img src="/help/v3.7.0/img/configuration/shortcut.png" alt="Shortcut" width="92" height="20" />
     <p>Supported transformation methods include generalization, microaggregation and suppression. When generalization is selected, minimum and maximum generalization levels can
     be specified. Microaggregation may be performed with or without prior clustering using the specified value generalization hierarchies, Moreover,
@@ -39,7 +39,7 @@
         <li>Ordinal: string variables with an ordinal scale.</li>
     </ol>
     <p>Data types can be set by right clicking on an attribute's row in the table. When needed, ARX will ask for a suitable format string.
-    Specifying a data type is optional, with String type used by default, but yields better results when creating generalization hierarchies and 
+    Specifying a data type is optional but yields better results when creating generalization hierarchies and 
     visualizing data in the analysis perspective.</p>
     <p>Variables can be defined as "response variables" in modeling efforts that will be performed using output data.
     When combined with an appropriate data quality model, ARX will then try to minimize impacts on the structural relationships between

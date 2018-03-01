@@ -2,21 +2,21 @@
     <h4>Supported privacy models</h4>
     <p>Three types of privacy threats are commonly considered when anonymizing data:</p>
     <ol>
-        <li><em>Membership disclosure</em> means that data linkage allows an attacker to determine whether or not data about an individual is contained in a data set. While this does not directly disclose any information from the data set itself, it may allow an attacker to infer meta-information. While this deals with implicit sensitive attributes (meaning attributes of an individual that are not contained in the data set), other disclosure models deal with explicit sensitive attributes.</li>
-        <li><em>Attribute disclosure</em> may be achieved even without linking an individual to a specific item in a data set. It protects sensitive attributes, which are attributes from the data set with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. As an example, linkage to a set of data entries allows inferring information if all items share a certain sensitive attribute value.</li>
+        <li><em>Membership disclosure</em> means that data linkage allows an attacker to determine whether or not data about an individual is contained in a dataset. While this does not directly disclose any information from the dataset itself, it may allow an attacker to infer meta-information. While this deals with implicit sensitive attributes (meaning attributes of an individual that are not contained in the dataset), other disclosure models deal with explicit sensitive attributes.</li>
+        <li><em>Attribute disclosure</em> may be achieved even without linking an individual to a specific item in a dataset. It protects sensitive attributes, which are attributes from the dataset with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. As an example, linkage to a set of data entries allows inferring information if all items share a certain sensitive attribute value.</li>
         <li><em>Identity disclosure</em> (or re-identification) means that an individual can be linked to a specific data entry. This is a serious type of attack, as it has legal consequences for data owners according to many laws and regulations worldwide. From the definition it also follows that an attacker can learn all sensitive information contained in the data entry about the individual.</li>
     </ol>
     <p>The specifics of the disclosure risks from which a dataset is to be protected can be specified by categorizing the attributes of the input dataset
     into different types:</p>
     <ol>
-        <li><em>Identifying attributes</em> are associated with a high risk of re-identification. They will be removed from the data set. Typical examples are names or Social Security Numbers.</li>
-        <li><em>Quasi-identifying attributes</em> can in combination be used for re-identification attacks. They will be transformed by means of generalization, suppression or microaggregation. Typical examples are gender, date of birth and ZIP codes.</li>
+        <li><em>Identifying attributes</em> are associated with a high risk of re-identification. They will be removed from the dataset. Typical examples are names or Social Security Numbers.</li>
+        <li><em>Quasi-identifying attributes</em> can in combination be used for re-identification attacks. They will be transformed. Typical examples are gender, date of birth and ZIP codes.</li>
         <li><em>Sensitive attributes</em> encode properties with which individuals are not willing to be linked with. As such, they might be of interest to an attacker and, if disclosed, could cause harm to data subjects. They will be kept unmodified but may be subject to further constraints, such as t-closeness or l-diversity. Typical examples are diagnoses.</li>
         <li><em>Insensitive attributes</em> are not associated with privacy risks. They will be kept unmodified.</li>
     </ol>
     <p>Moreover, some privacy and risk models supported by ARX address specific attacker models:</p>
     <ol>
-        <li>In the <em>prosecutor</em> model the attacker targets a specific individual and that she already knows that data about the individual is contained in the data set.</li>
+        <li>In the <em>prosecutor</em> model the attacker targets a specific individual and it is assumed that she already knows that data about the individual is contained in the dataset.</li>
         <li>In the <em>journalist</em> model the attacker targets a specific individual but it is not expected that she possesses background knowledge about membership.</li>
         <li>In the <em>marketer</em> model the attacker does not target a specific individual but she aims at re-identifying a high number of individuals.
         An attack can therefore only be considered successful if a larger fraction of the records could be re-identified.</li>
@@ -43,8 +43,8 @@
     probability distributions that are parameterized with sample characteristics. ARX supports the methods by Hoshino (Pitman), Zayatz and Chen 
     and McNulty (SNB). Different models may return differently accurate estimates of the number of population uniques. As a rule of thumb,
     the Pitman model should be used for sampling fractions lower than or equal to 10%. ARX also implements a
-    decision rule proposed and validated for clinical data sets by Dankar et al. More information can be found <a target="_blank" href="http://www.biomedcentral.com/1472-6947/12/66">here</a>.</p>
-    <p>Note: Methods for estimating population uniqueness assume that the data set is a uniform sample of the population.
+    decision rule proposed and validated for clinical datasets by Dankar et al. More information can be found <a target="_blank" href="http://www.biomedcentral.com/1472-6947/12/66">here</a>.</p>
+    <p>Note: Methods for estimating population uniqueness assume that the dataset is a uniform sample of the population.
     If this is not the case, results may be inaccurate.</p>
     <h4>Sample uniqueness</h4>
     <p>This privacy model can be used to restrict the fraction of records which are unique regarding the quasi-identifiers.</p>
@@ -56,7 +56,7 @@
     More information can be found <a target="_blank" href="http://dx.doi.org/10.1145/1217299.1217302">here</a> and <a target="_blank" href="http://dx.doi.org/10.1007/978-3-319-45381-1_11">here</a>.</p>
     <h4>t-Closeness</h4>
     <p>This privacy model can also be used to protect data from attribute disclosure. It requires that the distributions of values
-    of a sensitive attribute within each equivalence class must have a distance of less than <em>t</em> to the distribution 
+    of a sensitive attribute within each equivalence class must have a distance of not more than <em>t</em> to the distribution 
     of the attribute values in the input dataset. For this purpose, it bounds the cumulative absolute difference between the frequency distributions,
     which is calculated using the earth mover's distance (EMD). Different variants have been
     proposed for variables with different data types: (1) <em>equal ground distance</em> considers all values to be equally distant from
@@ -64,7 +64,7 @@
     and (3) <em>ordered ground distance</em> calculates distances based on the order of values. More information can be found <a target="_blank" href="http://dx.doi.org/10.1109/ICDE.2007.367856">here</a>.</p>
     <h4>&#948;-Disclosure privacy</h4>
     <p>This privacy model can also be used to protect data against attribute disclosure. It also enforces a restriction on the distances
-    between the distributions of sensitive values but uses a multiplicative definition which is more strict than the definition used by
+    between the distributions of sensitive values but uses a multiplicative definition which is stricter than the definition used by
     t-closeness. More information can be found <a target="_blank" href="https://doi.org/10.1145/1401890.1401904">here</a>.</p>
     <h4>&#946;-Likeness</h4>
     <p>This privacy model is related to t-closeness and &#948;-disclosure privacy and it can also be used to protect data against attribute disclosure.
@@ -79,7 +79,7 @@
     </p>
     <h4>Profitability</h4>
     <p>This model implements a game-theoretic approach for performing cost/benefit analyses of data publishing
-    to create output data sets which maximize data publisher's monetary benefit.
+    to create output datasets which maximize data publisher's monetary benefit.
     More information can be found <a target="_blank" href="http://dx.doi.org/10.1371/journal.pone.0120592">here</a> and
     <a target="_blank" href="https://knowledge.amia.org/65881-amia-1.3897810/t003-1.3901461/f003-1.3901462/2732143-1.3901626/2731708-1.3901623">here</a>.</p>
     <h4>Differential privacy</h4>

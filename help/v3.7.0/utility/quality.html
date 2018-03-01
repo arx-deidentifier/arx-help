@@ -2,11 +2,11 @@
     <h4>Data quality models</h4>
     <p>This section displays measures of data quality obtained for output data using various general-purpose models.
        In addition, the data types of attributes as well as the fraction of missing values is presented.</p>
-    <p>The view at the top, shows attribute-level quality, i.e. quality estimates that relate to individual
-       quasi-identifiers. The view at the bottom, shows data-level quality, i.e. quality estimates for the
+    <p>The view at the top shows attribute-level quality, i.e. quality estimates that relate to individual
+       quasi-identifiers. The view at the bottom shows data-level quality, i.e. quality estimates for the
        overall set of quasi-identifiers.</p>
     <img src="/help/v3.7.0/img/utility/quality.png" alt="Quality models" width="579" height="261" />
-    <p>Note that not all quality measures are necessarily supported for all attributes or data sets. If a quality measure
+    <p>Note that not all quality measures are necessarily supported for all attributes or datasets. If a quality measure
        could not be evaluated for an attribute, the result is displayed as "N/A" in the upper table. As a consequence,
        this attribute has also been ignored when calculating data-level quality using the same model.</p>
     <p>The following attribute-level quality models are currently implemented:</p>
@@ -16,7 +16,7 @@
         <li><em>Non-Uniform Entropy:</em> Quantifies differences in the distributions of attribute values. For details see: Prasser, F., Bild, R., Kuhn, K.A.: A Generic Method for Assessing the Quality of De-Identified Health Data. Proc. Med. Inf. Europe (2016). and  De Waal, A., Willenborg, L.:  Information loss through global recoding and local suppression. Netherlands Off. Stat., vol. 14, p. 17-20 (1999).</li>
         <li><em>Squared error:</em> Interprets values as numbers and captures the sum of squared errors in groups of indistinguishable records. For details see: Soria-Comas, J., et al.: T-closeness through microaggregation: Strict privacy with enhanced utility preservation. IEEE Trans. Knowl. Data Eng., 27(11), p. 3098-3110 (2015).</li>
 	</ol>
-	<p>In addition, the following data set-level quality models are available:</p>
+	<p>In addition, the following dataset-level quality models are available:</p>
 	<ol>
 	    <li><em>Average class size:</em> Measures the average size of groups of indistinguishable records. For details see: LeFevre, K., DeWitt, D., Ramakrishnan, R.: Mondrian multidimensional k-anonymity. Proc. Int. Conf. Data Engineering (2006).</li>
         <li><em>Discernibility:</em> Measures the size of groups of indistinguishable records and introduces a penalty for records which have been completely suppressed. For details see: Bayardo, R., Agrawal, R.: Data privacy through optimal k-anonymization. Proc. Int. Conf. Data Engineering, p. 217-228 (2005).</li>

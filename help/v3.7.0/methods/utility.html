@@ -11,6 +11,7 @@
         <li>Geometric mean: The geometric mean of the measurements for all attributes.</li>
         <li>Arithmetic mean: The arithmetic mean of the measurements for all attributes.</li>
         <li>Sum: The sum of the measurements for all attribute</li>
+        <li>Maximum: The maximum of the measurements for all attributes</li>
     </ol>
     <p>Cell-oriented and attribute-oriented measures can further parameterized with attribute weights, which specify the importance of the
     attributes for further analyses. ARX will try to reduce the degree of transformation that is applied to attributes with higher importance.</p>
@@ -33,10 +34,10 @@
     <h4>Record-oriented general-purpose models</h4>
     <ol>
         <li><em>Average equivalence class size</em>: This model estimates data quality by calculating the average size of classes of indistinguishable
-        records. It does not take into account the actual values attributes in the output dataset. More
+        records. It does not take into account the actual attribute values in the output dataset. More
         information can be found <a target="_blank" href="http://research.cs.wisc.edu/techreports/viewreport.php?report=1521">here</a>.</li>
         <li><em>Discernibility</em>: This model also estimates data quality based on the size of the equivalence classes in the output dataset.
-        Records which are suppressed are penalized. It does not take into account the actual values attributes in the output dataset. 
+        Records which are suppressed are penalized. It does not take into account the actual attribute values in the output dataset. 
         For further information, see <a target="_blank" href="http://dx.doi.org/10.1109/ICDE.2005.42">here</a> and <a target="_blank" href="http://dx.doi.org/10.1197/jamia.M3144">here</a>.</li>
         <li><em>Ambiguity</em>: This model quantifies the degree to which the records in the output dataset are ambiguous. 
         More information can be found <a target="_blank" href="http://www.tdp.cat/issues/tdp.a047a10.pdf">here</a>.</li>
