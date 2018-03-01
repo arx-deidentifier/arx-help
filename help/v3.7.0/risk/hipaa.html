@@ -2,7 +2,7 @@
     <h4>HIPAA identifiers</h4>
     <p>The Safe Harbor method of the US Health Insurance and
     Portability and Accountability Act specifies 18 identifiers that must be modified or removed in order to derive a 
-    de-identified data set. The aim of this perspective is to detect such identifiers.</p>
+    de-identified dataset. The aim of this perspective is to detect such identifiers.</p>
     <img src="/help/v3.7.0/img/risk/risk-5.png" alt="HIPAA identifiers" width="570" height="82" /> 
     <p>Note: This method works on a best-effort basis. If no HIPAA identifiers are detected, this does not mean that no
     HIPAA identifiers are present. ARX favors recall over precision and it does not implement methods for detecting
@@ -20,6 +20,6 @@
         <li>Internet Protocol (IP) addresses.</li>
     </ul>
     <p>The method computes edit distances between common labels for HIPAA identifiers and the labels of the attributes in the 
-    data set. Moreover, it checks the values of the attributes for common patterns (e.g. of license plate numbers, ZIP codes and dates) 
+    dataset. Moreover, it checks the values of the attributes for common patterns (e.g. of license plate numbers, ZIP codes and dates) 
     and common instance values (e.g. first names and last names).</p>
 </div>
