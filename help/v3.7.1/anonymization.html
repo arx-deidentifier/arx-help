@@ -1,0 +1,38 @@
+<div>
+    <h4>Performing the anonymization</h4>
+    <p>ARX provides a dedicated dialog for selecting an adequate search strategy, configuring aspects of the
+    transformation model, and, finally, starting the anonymization process:</p>
+    <img src="/help/v3.7.1/img/anonymization.png" alt="Anonymization" width="535" height="333" />
+    <p>Three different search strategies are available:</p>
+    <ol>
+        <li>Optimal search strategy.</li>
+		<li>Heuristic search strategy terminating after a pre-defined number of search steps.</li>
+		<li>Heuristic search strategy terminating after a pre-defined amount of time.</li>
+	</ol>
+	<p>Please note that the optimal search strategy reliably determines the transformation resulting in the highest
+	possible quality of output data but scalability issues may occur when processing large datasets. The heuristic
+	search strategies are often able to determine the optimal strategy very quickly, but optimality can not be guaranteed.
+	For large datasets they work on a best-effort basis.
+	<p>Two different transformation models are supported:</p>
+    <ol>
+        <li>Global transformation: the same transformation strategy will be applied to all records in the dataset.</li>
+        <li>Local transformation: different transformation strategies can be applied to different subset of the records
+        in the dataset. A limit on the number of different transformations that may be used can be specified.</li>
+    </ol>
+    <p>By combining the different transformation models with different transformation rules for the individual attributes a
+    wide variety of transformation methods can be used in combination:</p>
+    <ul>
+        <li>The <em>global transformation</em> can be used to implement (1) full-domain generalization, (2) top- and bottom-coding
+        (there is a shortcut for creating according rules in the hierarchy editor), (3) attribute-suppression
+        (there is a shortcut for creating according rules in the hierarchy editor), (4) record-suppression and (5) micro-aggregation.</li>
+        <li>The <em>local transformation</em> can be used to implement (1) full-domain generalization
+        (by defining a fixed generalization level), (2) top- and bottom-coding (by defining a fixed generalization level),
+        (3) local generalization, (4) attribute-suppression (by defining a fixed generalization level), (5) cell-suppression
+        and (6) micro-aggregation.</li>
+        <li>In addition, random sampling can be performed in the respective view in the configuration perspective.</li>
+    </ul>
+    <p>While it is not generally true that global transformation will involve less computational costs than local transformation, the 
+    former is typically faster. In each iteration of the local transformation method the selected search strategy will be used. Note,
+    however, that using the optimal strategy in each iteration does not necessarily imply that overall solution computed through 
+    local transformation will also be optimal.</p>
+</div>
