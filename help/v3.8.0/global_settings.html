@@ -1,0 +1,36 @@
+<div>
+    <h4>Project settings</h4>
+    <p>The settings window is accessible from either the application menu or the application toolbar.
+    <img src="/help/v3.8.0/img/general_settings_1.png" alt="Project settings" width="570" height="468" /></p>
+    The <em>Project</em> section can be used to alter general project properties:
+    <ul>
+        <li>Project meta data, including name, description and localization.</li>
+        <li>The syntax for CSV import and export.</li>
+    </ul>
+    The <em>Internals</em> section can be used to adjust performance and visualization parameters:
+    <ul>
+        <li>Snapshot settings control the space-time trade-off during data anonymization. Larger (relative) snapshot 
+            sizes will typically reduce execution time but increase memory consumption.</li>
+        <li>Some analyses and visualizations can be disabled when very large datasets are handled.</li> 
+    </ul>
+    The <em>Transformation</em> section provides options for altering and simplifying the presentation of transformed data:
+    <ul>
+        <li>Record suppression can enabled or disabled for non-anonymous output data.</li>    
+        <li>Attribute suppression can be enabled or disabled for sensitive and insensitive attributes.</li>
+    </ul>
+    The <em>Search method</em> section can be used to configure the search strategy and risk based anonymization:
+    <ul>
+        <li>An heuristic search using a time limit can be enabled for high-dimensional data.</li>
+        <li>Utility-driven record suppression can be disabled to improve execution times.</li>
+    </ul>
+    The <em>Utility analysis</em> section can be used to refine summary statistics and quality measurements:
+    <ul>
+        <li>Summary statistics may be calculated with or without list-wise deletion.</li>
+        <li>The use of functional hierarchies during the anonymization process can be disabled.</li>
+        <li>Parameters impacting the performance of the analysis of the usefulness of output data for classification tasks may be altered.</li>
+    </ul>
+    The <em>Risk analysis</em> section provides configuration options for the integrated solver for non-linear equation systems:
+    <ul>
+        <li>Optimization parameters include the total number of iterations, iterations per try and the required accuracy.</li>
+    </ul>
+</div>
