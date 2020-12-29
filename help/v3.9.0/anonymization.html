@@ -3,16 +3,23 @@
     <p>ARX provides a dedicated dialog for selecting an adequate search strategy, configuring aspects of the
     transformation model, and, finally, starting the anonymization process:</p>
     <img src="/help/v3.9.0/img/anonymization.png" alt="Anonymization" width="535" height="333" />
-    <p>Three different search strategies are available:</p>
+    <p>Two different types of search strategies are supported:</p>
     <ol>
         <li>Optimal search strategy.</li>
-		<li>Heuristic search strategy terminating after a pre-defined number of search steps.</li>
-		<li>Heuristic search strategy terminating after a pre-defined amount of time.</li>
+		<li>Heuristic search strategy.</li>
 	</ol>
-	<p>Please note that the optimal search strategy reliably determines the transformation resulting in the highest
+	<p>The optimal search strategy reliably determines the transformation resulting in the highest
 	possible quality of output data but scalability issues may occur when processing large datasets. The heuristic
-	search strategies are often able to determine the optimal strategy very quickly, but optimality can not be guaranteed.
-	For large datasets they work on a best-effort basis.
+	search strategies will terminate after a pre-defined number of search steps or a pre-defined amount of time.
+	They are often able to determine the optimal strategy, but optimality can not be guaranteed in the general case.
+	For large datasets they work on a best-effort basis.</p>
+	<p>Four different heuristic search strategies are supported:</p>
+	    <ol>
+		<li>Top-down specialization.</li>
+		<li>Bottom-up generalization.</li>
+		<li>Binary search, which combines top-down and bottom-up.</li>
+		<li>Genetic search.</li>
+	</ol>
 	<p>Two different transformation models are supported:</p>
     <ol>
         <li>Global transformation: the same transformation strategy will be applied to all records in the dataset.</li>
