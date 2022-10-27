@@ -18,7 +18,7 @@
     <p>Masking is a flexible mechanism that can be applied to many types of attributes and which is especially suitable
         for alphanumeric codes, such as ZIP codes. The following image shows a screenshot of the
         respective wizard:</p>
-    <img src="/help/v3.9.1/img/configuration/redaction_wizard.png" alt="Masking-based wizard" width="408" height="278" />
+    <img src="/help/v3.9.1/img/ch3-configuration/p0303_01_redaction_wizard.png" alt="Masking-based wizard" width="408" height="278" />
     <p>In the wizard, masking follows a two-step process. First, values are aligned either to the left or to the right.
         Then the characters are masked, again, either from left to right, or from right to left. All values are
         adjusted to a common length by adding padding characters. This character, as well as the character used
@@ -33,7 +33,7 @@
         arbitrary integers into intervals of length 10, only one interval [0, 10] needs to be defined. Defining a group
         of size two on the next level, automatically generalizes integers into groups of size 20. As is shown in the
         image (W1), the editor visually indicates automatically created repetitions of intervals and groups.</p>
-    <img src="/help/v3.9.1/img/configuration/interval_wizard_1.png" alt="Interval editor" width="408" height="278" />
+    <img src="/help/v3.9.1/img/ch3-configuration/p0303_02_interval_wizard_1.png" alt="Interval editor" width="408" height="278" />
     <p>To be able to create labels for intervals, each element must be associated with an aggregate function (W2).
        The following aggregate functions are supported:</p>
     <ol>
@@ -47,13 +47,13 @@
     <p>Clicking on an interval or a group prompts an editor which can be used for specifying parameters. Elements can
         be removed, added and merged by right-clicking their graphical representation. Intervals are defined by a
         minimum (inclusive) and maximum (exclusive) bound. Groups are defined by their size:</p>
-    <img src="/help/v3.9.1/img/configuration/interval_wizard_4.png" alt="Group" width="408" height="278" />
+    <img src="/help/v3.9.1/img/ch3-configuration/p0303_03_interval_wizard_4.png" alt="Group" width="408" height="278" />
     <p>Interval-based hierarchies might define ranges in which they are to be applied. Any value out of the range 
     defined by "minimum value" or "maximum value" will produce an error message. This can be used to implement sanity checks.
      Any value between the minimal or maximal value and the "bottom coding" or "top coding" values will be top- or bottom-coded.
      If values fall into an interval stretching from the bottom coding or top coding limit to the "snap" limit, it
      will be extended to the bottom or top coding limit.  Within the remaining range intervals will be repeated..</p>
-    <img src="/help/v3.9.1/img/configuration/interval_wizard_2.png" alt="Range" width="408" height="278" />
+    <img src="/help/v3.9.1/img/ch3-configuration/p0303_04_interval_wizard_2.png" alt="Range" width="408" height="278" />
     <h5>Order-based hierarchies</h5>
     <p>Order-based hierarchies follow a similar principle as interval-based hierarchies, but they can be applied to
         attributes with ordinal scale. In addition to the types of attributes covered by interval-based hierarchies this
@@ -64,16 +64,16 @@
         the values contained in the concrete dataset. The mechanism can be used to create semantic hierarchies from a
         pre-defined meaningful ordering of the domain of a discrete variable. Subsequent generalizations of values from
         the domain can be labeled with user defined constants.</p>
-    <img src="/help/v3.9.1/img/configuration/ordered_wizard.png" alt="Order-based wizard" width="408" height="278" />
+    <img src="/help/v3.9.1/img/ch3-configuration/p0303_05_ordered_wizard.png" alt="Order-based wizard" width="408" height="278" />
         <h5>Date-based hierarchies</h5>
     <p>This wizard supports the creation of hierarchies for dates by specifying the granularity of output data at increasing
        generalization levels. Please note that it is important to specify granularity levels that form an hierarchy (e.g.
        day-of-week can typically not be followed by week-of-year, because the same day-of-week can be generalized
        to different weeks of a year). When this constraint is violated, ARX will raise an error message during the
        anonymization process.</p>
-    <img src="/help/v3.9.1/img/configuration/date_wizard.png" alt="Date-based wizard" width="408" height="280" />
+    <img src="/help/v3.9.1/img/ch3-configuration/p0303_06_date_wizard.png" alt="Date-based wizard" width="408" height="280" />
     <p>In a final step, all wizards show a tabular representation of the resulting hierarchy for the current input dataset. 
         Additionally, the number of groups on each level is calculated. The functional representation created in the process can be
         exported and reused for different datasets with similar attributes.</p>
-    <img src="/help/v3.9.1/img/configuration/interval_wizard_5.png" alt="Wizard result" width="408" height="278" />
+    <img src="/help/v3.9.1/img/ch3-configuration/p0303_07_interval_wizard_5.png" alt="Wizard result" width="408" height="278" />
 </div>
