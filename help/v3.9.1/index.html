@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Important note: the folders structure and the filenames are hard coded in: https://github.com/arx-deidentifier/arx/blob/master/src/gui/org/deidentifier/arx/gui/view/impl/menu/DialogHelpConfig.java -->
+</head>
+<body>
+    <div>
+        <div style="float:left;">
+                <!-- <iframe width="300px" height="800px" src="contents.html" frameborder="0" allowfullscreen></iframe> -->
+        <style>
+            ol {
+                counter-reset: item;
+                padding-left: 10px;
+            }
+            li {
+                display: block
+            }
+            li:before {
+                content: counters(item, ".") " ";
+                counter-increment: item
+            }
+        </style>
+        <h4>ARX Help center</h4>
+        <ol>
+            <li><a href ="methods/overview.html"  target="myPage">Anonymization methods.</a>
+            <ol>
+                <li><a href ="methods/privacy.html" target="myPage">Privacy models.</a></li>
+                <li><a href ="methods/transformation.html" target="myPage">Transformation models.</a></li>
+                <li><a href ="methods/utility.html" target="myPage">Quality models.</a></li>
+                <li><a href ="anonymization.html" target="myPage">Anonymization dialog.</a></li>
+            </ol>
+            </li>
+            <li><a href ="perspectives.html" target="myPage">Overview of the graphical tool.</a>
+            <ol>
+                <li><a href ="perspectives_configuration.html" target="myPage">Configuering the de-identification process.</a></li>
+                <li><a href ="perspectives_exploration.html" target="myPage">Exploration of the solution space.</a></li>
+                <li><a href ="perspectives_utility.html" target="myPage">Analysis of data utility.</a></li>
+                <li><a href ="perspectives_risk.html" target="myPage">Analysis of risks.</a></li>
+            </ol>
+            </li>
+            <li><a href ="configuration/overview.html" target="myPage">Configueration</a>
+            <ol>
+                <li><a href ="configuration/inputdata.html" target="myPage">Viewing data sets.</a></li>
+                <li><a href ="configuration/attributes.html" target="myPage">Specifying attribute properties.</a></li>
+                <li><a href ="configuration/generalization_hierarchies.html" target="myPage">Creating generalization heirarchies.</a></li>
+                <li><a href ="configuration/criteria.html" target="myPage">Privacy, population, costs and benifits.</a></li>
+                <li><a href ="configuration/general_settings.html" target="myPage">Transformation and utlity model.</a></li>
+                <li><a href ="configuration/research_subset.html"  target="myPage">Extracting a research sample.</a></li>
+                <li><a href ="global_settings.html" target="myPage">Project settings.</a></li>
+
+            </ol>
+            </li>
+            <li><a href ="exploration/overview.html" target="myPage">Exploration.</a>
+            <ol>
+                <li><a href ="exploration/solution_space.html" target="myPage">Visualizations of the solution space.</a></li>
+                <li><a href ="exploration/filtering.html" target="myPage">Filtering the space.</a></li>
+                <li><a href ="exploration/clipboard.html" target="myPage">Using the clipboard</a></li>
+                <li><a href ="exploration/properties.html" target="myPage">Properties of transformations</a></li>
+            </ol>
+            </li>
+            <li><a href ="utility/overview.html" target="myPage">Utility analysis and enhancement.</a>
+            <ol>
+                <li><a href ="utility/data.html" target="myPage">Comparing data.</a></li>
+                <li><a href ="utility/summary.html" target="myPage">Summary statistics</a></li>
+                <li><a href ="utility/distribution.html" target="myPage">Empirical distribution</a></li>
+                <li><a href ="utility/contingency.html" target="myPage">Contingency table</a></li>
+                <li><a href ="utility/classes.html" target="myPage">Classes and records</a></li>
+                <li><a href ="utility/inputproperties.html" target="myPage">Input properties</a></li>
+                <li><a href ="utility/outputproperties.html" target="myPage">Output properties</a></li>
+                <li><a href ="utility/accuracy.html" target="myPage">Classification accuracy</a></li>
+                <li><a href ="utility/quality.html" target="myPage">Quality models</a></li>
+                <li><a href ="utility/localrecoding.html" target="myPage">Local recording</a></li>
+
+            </ol>
+            </li>
+            <li><a href ="risk/overview.html" target="myPage">Risk analysis.</a>
+            <ol>
+                <li><a href ="risk/classsizes.html" target="myPage">Distribution of risks</a></li>
+                <li><a href ="risk/quasiidentifiers.html" target="myPage">Quasai-identifiers</a></li>
+                <li><a href ="risk/reidentification.html" target="myPage">Re-identification risks</a></li>
+                <li><a href ="risk/hipaa.html" target="myPage">HIPAA identifiers</a></li>
+                <li><a href ="risk/uniques.html" target="myPage">Population uniques</a></li>
+                <li><a href ="risk/population.html" target="myPage">Population settings</a></li>
+            </ol>
+            </li>
+        </ol>
+    </div>
+    <div>
+        <div  style="float:right;">
+
+            <iframe name="myPage" id="myPage" width="800px" height="999px"   frameborder="0" allowfullscreen>
+
+        </iframe>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</body>
+</html>

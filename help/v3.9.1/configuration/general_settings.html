@@ -1,5 +1,5 @@
 <div>
-   <!-- 3.5.  -->
+   <!-- 3.5. general settings -->
     <h4>Transformation and utility model</h4>
     <p>In the first tab of this view, general properties of the transformation process can be specified.</p>
     <img src="../img/ch3-configuration/p0305_01_general_1.png" alt="General settings tab" width="370" height="120"/>
@@ -29,10 +29,13 @@
        ARX also supports user-defined aggregate functions for many quality models. These aggregate
        functions will be used to compile the estimates obtained for the individual attributes of a dataset into a global value.
        <strong>The recommended setting is "Arithmetic mean"</strong>.</p>
+
+    <p>Some quality models also support specifying whether generalization or suppression should be preferred when transforming data:</p>
+    <img src="../img/ch3-configuration/p0305_04_general_4.png" alt="Coding model tab" width="316" height="120"/>
+   
     <p>Most models support weights that can be assigned to attributes to specify their importance using the following view:</p>
     <img src="../img/ch3-configuration/p0305_03_general_3.png" alt="Attribute weights tab" width="316" height="120"/>
     <p>Each of the knobs can be used to associate a weight to a specific quasi-identifier. When anonymizing the
        dataset, ARX will try to reduce the loss of information for attributes with higher weights.</p>
-    <p>Some quality models also support specifying whether generalization or suppression should be preferred when transforming data:</p>
-    <img src="../img/ch3-configuration/p0305_04_general_4.png" alt="Coding model tab" width="316" height="120"/>
+
 </div>
