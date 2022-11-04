@@ -1,14 +1,23 @@
 <div>
+   <!-- 5.  -->
     <h4>Analyzing data utility</h4>
     <p>This perspective can be used to analyze the quality and utility of output data for the anticipated usage
        scenario. For this purpose, it is possible to compare the transformed dataset to the original input dataset. 
        In the upper part, this perspective will display the original data (area 1) and the result of the currently selected transformation (area 2). 
        Both tables are synchronized when they are browsed using the horizontal or vertical scroll bars. The areas 3 and 4 allow to 
        compare statistical information about the currently selected attribute(s).</p>
-    <img src="/help/v3.9.1/img/utility/overview.png" alt="Utility analysis" width="570" height="324" />
+    <img src="../img/ch5-utility/p0500_01_overview.png" alt="Utility analysis" width="570" height="470" />
     <p>The view further displays results of univariate and bivariate statistics and basic properties about the input and output dataset.
        Moreover, it provides access to statistics about the distribution of equivalence classes and suppressed records. Finally,
-       the suitability of output data as a training set for building classification models can be analyzed.</p>
+       the suitability of output data as a training set for building classification models can be analyzed. </p>
+        
+    <p>For areas 3 and 4, there are options to view or disable tabs and include or exclude special values via buttons in the top-right corner of the views:</p>
+       <ol>
+           <li>Pressing the first button will open a dialog to select which tab is displayed. </li>
+           <li>Pressing the second button will include the supressed values. </li>
+           <li>Pressing the third button will include the null values. </li>
+       </ol>
+    <img src="../img/ch5-utility/p0500_02_stats_buttons.png" alt="Utility analysis stats_buttons" width="570" />
     <p>Note: ARX tries to present comparable data visualizations for original and transformed datasets. For this purpose, it
        uses information from the attributes' data types and relationships between values extracted from the
        generalization hierarchies. As a result, specifying reasonable data types and hierarchies will increase the quality
