@@ -2,7 +2,7 @@
    <!-- 3.5. general settings -->
     <h4>Transformation and utility model</h4>
     <p>In the first tab of this view, general properties of the transformation process can be specified.</p>
-    <img src="../img/ch3-configuration/p0305_01_general_1.png" alt="General settings tab" width="370" height="120"/>
+    <img src="../img/ch3-configuration/p0305_01_general_1.png" alt="General settings tab" width="567" height="123 /> 
     <p>The first slider allows to define the suppression limit, which is the maximal number of records that can be removed from the input dataset.
        <strong>The recommended value for this parameter is "100%"</strong>. The option "Approximate" can be enabled to compute an approximate solution 
        with potentially significantly reduce execution times. The solution is guaranteed to fulfill the given privacy 
@@ -13,7 +13,7 @@
        <strong>The recommended setting is "off"</strong>.</p>
     <p>The second tab allows specifying the model for quantifying data quality which will be used as an optimization
     function during the anonymization process.</p>
-    <img src="../img/ch3-configuration/p0305_02_general_2.png" alt="Utility measuer tab" width="316" height="120"/>
+    <img src="../img/ch3-configuration/p0305_02_general_2.png" alt="Utility measuer tab" width="566" height="121 /> 
     <p>ARX will use the specified model to assign "scores" to potential solution candidates. A lower score is associated
        with higher data quality, less loss of information, higher publisher payout or increased classification accuracy,
        depending on the selected model. Note, however, that scores may significantly deviate from the actual values
@@ -31,10 +31,10 @@
        <strong>The recommended setting is "Arithmetic mean"</strong>.</p>
 
     <p>Some quality models also support specifying whether generalization or suppression should be preferred when transforming data:</p>
-    <img src="../img/ch3-configuration/p0305_04_general_4.png" alt="Coding model tab" width="316" height="120"/>
+    <img src="../img/ch3-configuration/p0305_04_general_4.png" alt="Coding model tab" width="566" height="117 /> 
    
     <p>Most models support weights that can be assigned to attributes to specify their importance using the following view:</p>
-    <img src="../img/ch3-configuration/p0305_03_general_3.png" alt="Attribute weights tab" width="316" height="120"/>
+    <img src="../img/ch3-configuration/p0305_03_general_3.png" alt="Attribute weights tab" width="562" height="121 /> 
     <p>Each of the knobs can be used to associate a weight to a specific quasi-identifier. When anonymizing the
        dataset, ARX will try to reduce the loss of information for attributes with higher weights.</p>
 
