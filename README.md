@@ -1,8 +1,8 @@
 # ARX Help
 
-This repository contains the online help of [ARX](https://github.com/arx-deidentifier/arx).
+This repository contains the online help of [ARX](https://github.com/arx-deidentifier/arx). The help structure can be found in [messages.properties] (https://github.com/arx-deidentifier/arx/blob/0001fee1755da5dd9e0a83c0e72477f63a1a1db4/src/gui/org/deidentifier/arx/gui/resources/messages.properties) in Arx repository. 
 
-[Contents:](https://github.com/arx-deidentifier/arx/blob/0001fee1755da5dd9e0a83c0e72477f63a1a1db4/src/gui/org/deidentifier/arx/gui/resources/messages.properties#L956)
+Contents:
 
 - [1. Anonymization methods:](https://github.com/arx-deidentifier/arx-help/blob/master/help/v3.9.1/methods/overview.html)
   - [1.1. Privacy models](https://github.com/arx-deidentifier/arx-help/blob/master/help/v3.9.1/methods/privacy.html)
