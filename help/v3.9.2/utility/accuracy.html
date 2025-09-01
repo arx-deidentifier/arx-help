@@ -1,0 +1,26 @@
+<div>
+    <h4>Classification performance</h4>
+    <p>This view can be used to configure classification models and their parameters as well as to compare the 
+    performance of these models trained on input and anonymized output data. Please note that ARX supports a specific quality
+    model for optimizing output data towards suitability as a training set for model generation.</p>
+    
+    <p>In the view displayed at the bottom left, feature and target variables can be selected and feature scaling functions may be specified:</p>
+    <img src="/help/v3.9.2/img/utility/analyze_9.png" alt="Classification models" width="580" height="136" />
+    <p>In the view displayed at the bottom right different types of classification models can be selected and configured:</p>
+    <img src="/help/v3.9.2/img/utility/analyze_18.png" alt="Classification models" width="580" height="139" />
+    <p>ARX currently supports the following types of classification models:</p>
+       <ol>
+    	<li>Logistic regression</li>
+        <li>Random forest</li>
+        <li>Naive Bayes</li>
+    </ol>
+    <p>At the top, two different views can be selected by tabs ("Overview" and "ROC curves"). For input as
+    well as output data, these views show different results of the performance analysis. Performance measures are typically
+    expressed relative to the performance of a trivial ZeroR classifier trained on unmodified input data and the selected type of model 
+    also trained on input data. Results are obtained using k-fold cross-validation.</p>
+    <p>The tables in the view "Overview" display (relative) classification accuracies as well as sensitivity, specificity and Brier score:</p> 
+    <img src="/help/v3.9.2/img/utility/analyze_19.png" alt="Classification accuracy" width="580" height="160" />
+    <p>The plots and tables in the view "ROC Curves", display ROC curves and the Area under the ROC Curve (AUC) for selected instances of the target variable:</p>
+    <img src="/help/v3.9.2/img/utility/analyze_20.png" alt="Classification accuracy" width="580" height="258" />
+    <p>Please note that ARX uses an one-vs-all approach to calculate performance measures for multinomial classifiers.</p>
+</div>

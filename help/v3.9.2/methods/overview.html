@@ -1,0 +1,43 @@
+<div>
+<h4>Overview of supported anonymization methods</h4>
+<p>ARX is an open source tool for transforming structured (i.e. tabular) personal data using 
+selected methods from the broad areas of data anonymization and statistical disclosure 
+control. It supports transforming datasets in ways that make sure that they adhere to 
+user-specified privacy models and risk thresholds that mitigate attacks that may lead to 
+privacy breaches. ARX can be used to remove direct identifiers (e.g. names) from datasets 
+and to enforce further constraints on indirect identifiers. Indirect identifiers 
+(or quasi-identifiers, or keys) are attributes that do not directly identify an individual 
+but may together with other indirect identifiers form an identifier that can be used for 
+linkage attacks. It is typically assumed that information about indirect identifiers is 
+available to the attacker (in some form of background knowledge) and that they cannot 
+simply be removed from the dataset (e.g. because they are required later for analyses). 
+ARX also supports methods for protecting sensitive attributes from disclosure and semantic 
+privacy models, which require fewer assumptions to be made about the goals and the background 
+knowledge of attackers.</p>
+<p>ARX supports (almost) arbitrary combinations the following privacy models:</p>
+<ul>
+     <li>Syntactic privacy models, such as k-anonymity, l-diversity, t-closeness, &delta;-disclosure privacy, &beta;-likeness and &delta;-presence.</li>
+     <li>Statistical privacy models, such as k-map, thresholds on average risk and methods based on super-population models.</li>
+     <li>Semantic privacy models, such as (&epsilon;, &delta;)-differential privacy and a game-theoretic de-identification approach.</li>
+</ul>
+<p>ARX supports (almost) arbitrary combinations of the following data transformation models:</p>
+<ul>
+     <li>Global and local transformation schemes: ARX can apply the same transformation scheme to all records in a dataset or apply different transformation schemes to different subsets of records.</li>
+     <li>Random sampling: Privacy risks can be reduced by drawing a random sample from the input dataset.</li>
+     <li>Generalization: Records can be made less unique by generalizing attribute values based on user-specified hierarchies.</li>
+     <li>Record, attribute and cell suppression: Privacy risks can be lowered by removing individual attribute values or complete records.</li>
+     <li>Microaggregation: Clusters of numeric attribute values can be combined into a common value by user-specified aggregation functions.</li>
+     <li>Top- and bottom-coding: Values exceeding a user-defined range can be truncated.</li>
+     <li>Categorization: Continuous variables can be categorized automatically.</li>
+</ul>
+<p>Supported data quality models and objective functions include:</p>
+<ul>
+     <li>Cell-oriented models, measuring data granularity and transformation degrees.</li>
+     <li>Attribute-oriented models, quantifying deviations in value distributions.</li>
+     <li>Record-oriented general-purpose models, quantifying the degree of uniqueness and ambiguity of records, also based on entropy.</li>
+     <li>Workload-aware models, measuring the data publisher's benefit and the suitability of output data as a training set for building classification models.</li>
+</ul>
+Additionally, methods are provided for (1) creating data transformation rules, (2) analyzing data utility,
+(3) estimating residual re-identification risks, (4) finding quasi-identifying variables that may need to
+be transformed and (5) iteratively adjusting the anonymization parameters using a semi-automated process.
+</div>

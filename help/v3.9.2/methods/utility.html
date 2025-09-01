@@ -1,0 +1,52 @@
+<div>
+    <h4>Supported quality/utility models</h4>
+    <p>Measuring data quality is a complex issue and ARX supports multiple models that can be used as objective functions for optimizing
+    the output data of an anonymization process. Typically, these methods model a decrease in data quality as an increase in information
+    loss, which can be quantified. ARX supports quality models, which measure quality based on individual cell values, attributes 
+    or records and a workload-aware model focusing on the generation of classification models.</p>
+    <p>Cell-oriented and attribute-oriented models can be parameterized with different aggregate functions, which define how the individual
+    measures will be compiled into a global measure for the overall dataset. The following aggregate functions are available:</p>
+    <ol>
+        <li>Rank: Ordered list of measurements for all attributes, which will be compared lexicographically.</li>
+        <li>Geometric mean: The geometric mean of the measurements for all attributes.</li>
+        <li>Arithmetic mean: The arithmetic mean of the measurements for all attributes.</li>
+        <li>Sum: The sum of the measurements for all attribute</li>
+        <li>Maximum: The maximum of the measurements for all attributes</li>
+    </ol>
+    <p>Cell-oriented and attribute-oriented measures can further parameterized with attribute weights, which specify the importance of the
+    attributes for further analyses. ARX will try to reduce the degree of transformation that is applied to attributes with higher importance.</p>
+    <h4>Cell-oriented general-purpose models</h4>
+    <ol>
+        <li><em>Granularity/loss</em>: This measure summarizes the degree to which transformed attribute values cover the original domain of an attribute.
+        ARX implements sophisticated methods for quantifying this coverage based on functional representations of generalization rules.
+        Moreover, the model can be parameterized to influence the degree of generalization and suppression that will be applied to a dataset.
+        More information can be found <a target="_blank" href="http://dx.doi.org/10.1145/775047.775089">here</a>.</li>
+        <li><em>Precision</em>: This model estimates data quality based on normalized generalization levels of transformed attribute values.
+        More information can be found <a target="_blank" href="http://dx.doi.org/10.1142/S021848850200165X">here</a>.</li>
+    </ol>
+    <h4>Attribute-oriented general-purpose models</h4>
+    <ol>
+        <li><em>Non-uniform entropy</em>: This model quantifies loss of information based on mutual information, which measures the amount of 
+        information that can be obtained about the original values of variables in the input dataset by observing the values of variables in
+        the output dataset. The non-uniform variant implemented in ARX is described <a target="_blank" href="http://dx.doi.org/10.1109/TKDE.2008.129">here</a></li>
+        <li><em>Height</em>: This very simple model quantifies loss of information as the sum of the generalization levels applied to all attribute values.</li>
+    </ol>
+    <h4>Record-oriented general-purpose models</h4>
+    <ol>
+        <li><em>Average equivalence class size</em>: This model estimates data quality by calculating the average size of classes of indistinguishable
+        records. It does not take into account the actual attribute values in the output dataset. More
+        information can be found <a target="_blank" href="https://doi.org/10.1109/ICDE.2006.101">here</a>.</li>
+        <li><em>Discernibility</em>: This model also estimates data quality based on the size of the equivalence classes in the output dataset.
+        Records which are suppressed are penalized. It does not take into account the actual attribute values in the output dataset. 
+        For further information, see <a target="_blank" href="http://dx.doi.org/10.1109/ICDE.2005.42">here</a> and <a target="_blank" href="http://dx.doi.org/10.1197/jamia.M3144">here</a>.</li>
+        <li><em>Ambiguity</em>: This model quantifies the degree to which the records in the output dataset are ambiguous. 
+        More information can be found <a target="_blank" href="http://www.tdp.cat/issues/tdp.a047a10.pdf">here</a>.</li>
+        <li><em>Entropy-based model</em>: This model has been proposed <a target="_blank" href="http://dx.doi.org/10.1371/journal.pone.0120592">here</a>.</li>
+    </ol>
+    <h4>Special-purpose models</h4>
+    <p>ARX also implements a model for maximizing the data publisher's benefit following the game-theoretic approach implemented in the
+    profitability privacy model. For further details, please see <a target="_blank" href="http://dx.doi.org/10.1371/journal.pone.0120592">here</a> and
+    <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5977602/">here</a>.</p>
+    <p>Since version 3.7.0 ARX further implements a model for optimizing output data towards suitability as a training set for building
+    classification models. For more details, please see <a target="_blank" href="https://doi.org/10.1145/775047.775089">here</a>.</p>
+</div>
